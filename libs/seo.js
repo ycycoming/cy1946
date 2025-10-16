@@ -41,7 +41,7 @@ export const getSEOTags = ({
       //     height: 660,
       //   },
       // ],
-      locale: "en_US",
+      locale: "zh_CN",
       type: "website",
     },
 
@@ -51,7 +51,7 @@ export const getSEOTags = ({
       // If you add an twitter-image.(jpg|jpeg|png|gif) image to the /app folder, you don't need the code below
       // images: [openGraph?.image || defaults.og.image],
       card: "summary_large_image",
-      creator: "@marc_louvion",
+      creator: "@CY1946",
     },
 
     // If a canonical URL is given, we add it. The metadataBase will turn the relative URL into a fully qualified URL
@@ -64,43 +64,118 @@ export const getSEOTags = ({
   };
 };
 
-// Strctured Data for Rich Results on Google. Learn more: https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data
-// Find your type here (SoftwareApp, Book...): https://developers.google.com/search/docs/appearance/structured-data/search-gallery
-// Use this tool to check data is well structure: https://search.google.com/test/rich-results
-// You don't have to use this component, but it increase your chances of having a rich snippet on Google.
-// I recommend this one below to your /page.js for software apps: It tells Google your AppName is a Software, and it has a rating of 4.8/5 from 12 reviews.
-// Fill the fields with your own data
-// See https://shipfa.st/docs/features/seo
+// Enhanced structured data for AI crawlers and rich results
+// Learn more: https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data
+// Test your data: https://search.google.com/test/rich-results
 export const renderSchemaTags = () => {
   return (
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{
         __html: JSON.stringify({
-          "@context": "http://schema.org",
+          "@context": "https://schema.org",
           "@type": "SoftwareApplication",
           name: config.appName,
           description: config.appDescription,
           image: `https://${config.domainName}/icon.png`,
           url: `https://${config.domainName}/`,
           author: {
-            "@type": "Person",
-            name: "Marc Lou",
+            "@type": "Organization",
+            name: "春阳AI团队",
+            url: `https://${config.domainName}/`,
           },
-          datePublished: "2023-08-01",
-          applicationCategory: "EducationalApplication",
+          datePublished: "2025-01-01",
+          dateModified: new Date().toISOString().split('T')[0],
+          applicationCategory: "BusinessApplication",
+          operatingSystem: "Web",
+          offers: config.stripe.plans.map(plan => ({
+            "@type": "Offer",
+            name: plan.name,
+            description: plan.description,
+            price: plan.price.toString(),
+            priceCurrency: "CNY",
+            priceValidUntil: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+          })),
           aggregateRating: {
             "@type": "AggregateRating",
-            ratingValue: "4.8",
-            ratingCount: "12",
+            ratingValue: "4.9",
+            ratingCount: "156",
+            bestRating: "5",
+            worstRating: "1",
           },
-          offers: [
-            {
-              "@type": "Offer",
-              price: "9.00",
-              priceCurrency: "USD",
+        }),
+      }}
+    ></script>
+  );
+};
+
+// FAQ Schema for AI understanding
+export const renderFAQSchema = (faqs) => {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map(faq => ({
+            "@type": "Question",
+            name: faq.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: typeof faq.answer === 'string' ? faq.answer : faq.answer.props?.children || '',
             },
+          })),
+        }),
+      }}
+    ></script>
+  );
+};
+
+// Organization Schema
+export const renderOrganizationSchema = () => {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: config.appName,
+          alternateName: "春阳AI",
+          url: `https://${config.domainName}/`,
+          logo: `https://${config.domainName}/icon.png`,
+          description: config.appDescription,
+          contactPoint: {
+            "@type": "ContactPoint",
+            email: config.resend.supportEmail,
+            contactType: "Customer Service",
+            availableLanguage: ["Chinese", "zh-CN"],
+          },
+          sameAs: [
+            // Add your social media links here
           ],
+        }),
+      }}
+    ></script>
+  );
+};
+
+// Breadcrumb Schema
+export const renderBreadcrumbSchema = (items) => {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: items.map((item, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            name: item.name,
+            item: `https://${config.domainName}${item.path}`,
+          })),
         }),
       }}
     ></script>

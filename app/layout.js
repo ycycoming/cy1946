@@ -20,7 +20,7 @@ export const metadata = getSEOTags();
 export default function RootLayout({ children }) {
 	return (
 		<html
-			lang="en"
+			lang="zh-CN"
 			data-theme={config.colors.theme}
 			className={font.className}
 		>

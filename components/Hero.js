@@ -21,15 +21,14 @@ const Hero = () => {
           </svg>
         </a>
 
-        <h1 className="font-extrabold text-4xl lg:text-6xl tracking-tight md:-mb-4">
-          Ship your startup in days, not weeks
+        <h1 className="font-extrabold text-4xl lg:text-6xl tracking-tight md:-mb-4" itemProp="headline">
+          复刻自己，让AI数字分身为你工作
         </h1>
-        <p className="text-lg opacity-80 leading-relaxed">
-          The NextJS boilerplate with all you need to build your SaaS, AI tool,
-          or any other web app. From idea to production in 5 minutes.
+        <p className="text-lg opacity-80 leading-relaxed" itemProp="description">
+          春阳AI（CY1946）帮助中小企业和个人IP打造专属数字分身。通过AI技术复刻销冠、运营专家、客服等角色，实现短视频自动生成、私域客户智能运营、7x24小时客服接待，大幅提升转化率和工作效率。适用于电商、教育、咨询等各行业，让您的业务在AI时代实现倍增。
         </p>
         <button className="btn btn-primary btn-wide">
-          Get {config.appName}
+          开始使用 {config.appName}
         </button>
 
         <TestimonialsAvatars priority={true} />
@@ -37,7 +36,7 @@ const Hero = () => {
       <div className="lg:w-full">
         <Image
           src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80"
-          alt="Product Demo"
+          alt="春阳AI数字分身系统界面展示 - 智能私域运营平台，包含AI数字人、短视频生成、客户管理等功能模块，帮助企业实现自动化运营和客户转化"
           className="w-full"
           priority={true}
           width={500}

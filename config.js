@@ -1,11 +1,11 @@
 const config = {
   // REQUIRED
-  appName: "ShipFast",
+  appName: "鲸奇业务智能体",
   // REQUIRED: a short description of your app for SEO tags (can be overwritten)
   appDescription:
-    "The NextJS boilerplate with all you need to build your SaaS, AI tool, or any other web app.",
+    "鲸奇业务智能体 - 帮助中小企业和个人IP复刻自己，打造AI数字分身，实现私域运营自动化，提升客户转化和品牌影响力。",
   // REQUIRED (no https://, not trialing slash at the end, just the naked domain)
-  domainName: "shipfa.st",
+  domainName: "CY1946.COM",
   crisp: {
     // Crisp website ID. IF YOU DON'T USE CRISP: just remove this => Then add a support email in this config file (resend.supportEmail) otherwise customer support won't work.
     id: "",
@@ -22,20 +22,22 @@ const config = {
             ? "price_1Niyy5AxyNprDp7iZIqEyD2h"
             : "price_456",
         //  REQUIRED - Name of the plan, displayed on the pricing page
-        name: "Starter",
+        name: "SaaS订阅版",
         // A friendly description of the plan, displayed on the pricing page. Tip: explain why this plan and not others
-        description: "Perfect for small projects",
+        description: "按年订阅，功能齐全",
         // The price you want to display, the one user will be charged on Stripe.
-        price: 79,
+        price: 10000,
         // If you have an anchor price (i.e. $29) that you want to display crossed out, put it here. Otherwise, leave it empty
-        priceAnchor: 99,
+        priceAnchor: 15000,
         features: [
           {
-            name: "NextJS boilerplate",
+            name: "完整AI数字分身系统",
           },
-          { name: "User oauth" },
-          { name: "Database" },
-          { name: "Emails" },
+          { name: "短视频自动生成" },
+          { name: "私域客户运营" },
+          { name: "智能客服接待" },
+          { name: "数据分析报告" },
+          { name: "技术支持" },
         ],
       },
       {
@@ -45,19 +47,21 @@ const config = {
           process.env.NODE_ENV === "development"
             ? "price_1O5KtcAxyNprDp7iftKnrrpw"
             : "price_456",
-        name: "Advanced",
-        description: "You need more power",
-        price: 99,
-        priceAnchor: 149,
+        name: "OaaS按结果付费版",
+        description: "按效果付费，深度定制",
+        price: 30000,
+        priceAnchor: 50000,
         features: [
           {
-            name: "NextJS boilerplate",
+            name: "定制化AI数字分身矩阵",
           },
-          { name: "User oauth" },
-          { name: "Database" },
-          { name: "Emails" },
-          { name: "1 year of updates" },
-          { name: "24/7 support" },
+          { name: "销冠/运营/客服多角色复刻" },
+          { name: "私域全流程自动化" },
+          { name: "ROI效果保障" },
+          { name: "品牌形象深度定制" },
+          { name: "专属客户成功团队" },
+          { name: "按结果付费机制" },
+          { name: "优先功能开发" },
         ],
       },
     ],
@@ -70,11 +74,11 @@ const config = {
   },
   resend: {
     // REQUIRED — Email 'From' field to be used when sending magic login links
-    fromNoReply: `ShipFast <noreply@resend.shipfa.st>`,
+    fromNoReply: `鲸奇业务智能体 <noreply@cy1946.com>`,
     // REQUIRED — Email 'From' field to be used when sending other emails, like abandoned carts, updates etc..
-    fromAdmin: `Marc at ShipFast <marc@resend.shipfa.st>`,
+    fromAdmin: `鲸奇团队 <support@cy1946.com>`,
     // Email shown to customer if need support. Leave empty if not needed => if empty, set up Crisp above, otherwise you won't be able to offer customer support."
-    supportEmail: "marc.louvion@gmail.com",
+    supportEmail: "support@cy1946.com",
   },
   colors: {
     // REQUIRED — The DaisyUI theme to use (added to the main layout.js). Leave blank for default (light & dark mode). If you any other theme than light/dark, you need to add it in config.tailwind.js in daisyui.themes.

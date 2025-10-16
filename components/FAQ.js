@@ -1,28 +1,43 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { renderFAQSchema } from "@/libs/seo";
 
 // <FAQ> component is a lsit of <Item> component
 // Just import the FAQ & add your FAQ content to the const faqList
 
-const faqList = [
+// Export FAQ list for schema generation
+export const faqList = [
   {
-    question: "What do I get exactly?",
-    answer: <div className="space-y-2 leading-relaxed">Loreum Ipseum</div>,
+    question: "什么是AI数字分身？",
+    answer: <div className="space-y-2 leading-relaxed">AI数字分身是基于您的个人特征、沟通风格、专业知识训练的AI助手，能够代替您完成客户接待、内容创作、私域运营等工作，7x24小时不间断服务。</div>,
   },
   {
-    question: "Can I get a refund?",
+    question: "我需要懂技术吗？",
     answer: (
       <p>
-        Yes! You can request a refund within 7 days of your purchase. Reach out
-        by email.
+        完全不需要！春阳AI提供简单易用的界面，只需要上传您的资料和设置偏好，系统会自动完成AI训练和部署。我们还提供专业的技术支持团队帮助您。
       </p>
     ),
   },
   {
-    question: "I have another question",
+    question: "多久可以开始使用？",
     answer: (
-      <div className="space-y-2 leading-relaxed">Cool, contact us by email</div>
+      <div className="space-y-2 leading-relaxed">注册后立即可以开始配置您的AI数字分身，通常3-5个工作日完成训练即可投入使用。企业版提供加急服务，24小时内可完成部署。</div>
+    ),
+  },
+  {
+    question: "支持哪些应用场景？",
+    answer: (
+      <div className="space-y-2 leading-relaxed">支持私域客户运营、短视频内容生成、客户咨询接待、销售线索跟进、品牌内容创作等多个场景，可根据您的业务需求定制。</div>
+    ),
+  },
+  {
+    question: "数据安全吗？",
+    answer: (
+      <p>
+        我们采用企业级加密技术保护您的数据，所有信息都存储在国内合规服务器，符合数据安全法规。您的AI数字分身仅为您服务，不会用于其他用途。
+      </p>
     ),
   },
 ];
@@ -88,23 +103,36 @@ const Item = ({ item }) => {
 };
 
 const FAQ = () => {
-  return (
-    <section className="bg-base-200" id="faq">
-      <div className="py-24 px-8 max-w-7xl mx-auto flex flex-col md:flex-row gap-12">
-        <div className="flex flex-col text-left basis-1/2">
-          <p className="inline-block font-semibold text-primary mb-4">FAQ</p>
-          <p className="sm:text-4xl text-3xl font-extrabold text-base-content">
-            Frequently Asked Questions
-          </p>
-        </div>
+  // Prepare FAQ data for schema (convert JSX to plain text)
+  const faqSchemaData = faqList.map(item => ({
+    question: item.question,
+    answer: typeof item.answer === 'string'
+      ? item.answer
+      : item.answer?.props?.children || item.question
+  }));
 
-        <ul className="basis-1/2">
-          {faqList.map((item, i) => (
-            <Item key={i} item={item} />
-          ))}
-        </ul>
-      </div>
-    </section>
+  return (
+    <>
+      {/* FAQ Schema for AI crawlers */}
+      {renderFAQSchema(faqSchemaData)}
+
+      <section className="bg-base-200" id="faq" aria-labelledby="faq-heading">
+        <div className="py-24 px-8 max-w-7xl mx-auto flex flex-col md:flex-row gap-12">
+          <div className="flex flex-col text-left basis-1/2">
+            <p className="inline-block font-semibold text-primary mb-4">常见问题</p>
+            <h2 id="faq-heading" className="sm:text-4xl text-3xl font-extrabold text-base-content">
+              您可能想了解的问题
+            </h2>
+          </div>
+
+          <ul className="basis-1/2" role="list">
+            {faqList.map((item, i) => (
+              <Item key={i} item={item} />
+            ))}
+          </ul>
+        </div>
+      </section>
+    </>
   );
 };
 

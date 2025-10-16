@@ -7,13 +7,16 @@ import ButtonCheckout from "./ButtonCheckout";
 
 const Pricing = () => {
   return (
-    <section className="bg-base-200 overflow-hidden" id="pricing">
+    <section className="bg-base-200 overflow-hidden" id="pricing" aria-labelledby="pricing-heading">
       <div className="py-24 px-8 max-w-5xl mx-auto">
         <div className="flex flex-col text-center w-full mb-20">
-          <p className="font-medium text-primary mb-8">Pricing</p>
-          <h2 className="font-bold text-3xl lg:text-5xl tracking-tight">
-            Save hours of repetitive code and ship faster!
+          <p className="font-medium text-primary mb-8">定价方案</p>
+          <h2 id="pricing-heading" className="font-bold text-3xl lg:text-5xl tracking-tight">
+            选择适合您的AI数字分身方案
           </h2>
+          <p className="mt-4 text-base-content/70 max-w-2xl mx-auto">
+            无论您是个人创业者还是企业团队，我们都有适合的解决方案。按年付费，享受更多优惠。
+          </p>
         </div>
 
         <div className="relative flex justify-center flex-col lg:flex-row items-center lg:items-stretch gap-8">
@@ -58,11 +61,11 @@ const Pricing = () => {
                     </div>
                   )}
                   <p className={`text-5xl tracking-tight font-extrabold`}>
-                    ${plan.price}
+                    ¥{plan.price}
                   </p>
                   <div className="flex flex-col justify-end mb-[4px]">
                     <p className="text-xs text-base-content/60 uppercase font-semibold">
-                      USD
+                      /年
                     </p>
                   </div>
                 </div>

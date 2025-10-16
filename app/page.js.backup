@@ -1,0 +1,64 @@
+import { Suspense } from 'react';
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import Problem from "@/components/Problem";
+import FeaturesAccordion from "@/components/FeaturesAccordion";
+import Pricing from "@/components/Pricing";
+import FAQ from "@/components/FAQ";
+import CTA from "@/components/CTA";
+import Footer from "@/components/Footer";
+import { getSEOTags, renderSchemaTags, renderOrganizationSchema } from "@/libs/seo";
+
+// Enhanced SEO with canonical URL
+export const metadata = getSEOTags({
+  title: "春阳AI - AI数字分身系统 | 复刻自己，让AI为您工作",
+  description: "春阳AI帮助中小企业和个人IP打造专属数字分身，自动生成短视频、运营私域客户、提升转化率。AI时代的智能运营解决方案，让您的业务实现倍增。",
+  canonicalUrlRelative: "/",
+  keywords: ["AI数字分身", "私域运营", "短视频生成", "智能客服", "AI助手", "企业AI", "个人IP"],
+});
+
+export default function Home() {
+  return (
+    <>
+      {/* Enhanced structured data for AI crawlers */}
+      {renderSchemaTags()}
+      {renderOrganizationSchema()}
+
+      {/* Page summary for AI understanding - hidden but accessible */}
+      <div className="sr-only" aria-label="页面摘要">
+        <h1>春阳AI - AI数字分身系统</h1>
+        <p>春阳AI（CY1946）提供全方位AI数字分身解决方案，帮助中小企业和个人IP复刻销冠、运营专家、客服等角色，实现私域运营自动化。</p>
+        <section aria-label="核心功能">
+          <h2>核心功能</h2>
+          <ul>
+            <li>AI数字分身复刻：基于个人特质训练AI模型</li>
+            <li>智能短视频生成：一键生成品牌短视频内容</li>
+            <li>私域运营自动化：智能管理微信私域客户</li>
+            <li>智能客服系统：7x24小时在线服务</li>
+            <li>品牌形象定制：打造独特个人品牌</li>
+          </ul>
+        </section>
+        <section aria-label="定价方案">
+          <h2>定价方案</h2>
+          <ul>
+            <li>SaaS订阅版：10,000元/年 - 适合个人和小型团队</li>
+            <li>OaaS按结果付费版：30,000元/年起 - 适合企业深度定制</li>
+          </ul>
+        </section>
+      </div>
+
+      <Suspense>
+        <Header />
+      </Suspense>
+      <main role="main" aria-label="主要内容">
+        <Hero />
+        <Problem />
+        <FeaturesAccordion />
+        <Pricing />
+        <FAQ />
+        <CTA />
+      </main>
+      <Footer />
+    </>
+  );
+}

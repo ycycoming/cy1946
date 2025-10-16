@@ -10,7 +10,8 @@ export default async function Dashboard() {
     <main className="min-h-screen p-8 pb-24">
       <section className="max-w-xl mx-auto space-y-8">
         <ButtonAccount />
-        <h1 className="text-3xl md:text-4xl font-extrabold">Private Page</h1>
+        <h1 className="text-3xl md:text-4xl font-extrabold">春阳AI控制台</h1>
+        <p className="text-base-content/80">欢迎使用春阳AI数字分身系统</p>
       </section>
     </main>
   );
