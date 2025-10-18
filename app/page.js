@@ -62,9 +62,6 @@ export default function Home() {
                 </Link>
               </nav>
               <div className="flex items-center space-x-3">
-                <Link href={config.auth.loginUrl} className="btn btn-ghost text-gray-700 font-medium normal-case">
-                  登录
-                </Link>
                 <Link href="#how-it-works" className="btn bg-blue-600 hover:bg-blue-700 text-white border-0 font-medium normal-case shadow-sm">
                   来吧，展示
                 </Link>
@@ -482,74 +479,123 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Features Section */}
+          {/* Features Section - 六边形战士 */}
           <section id="features" className="py-24 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  AI销冠有点「顶」
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+                  AI销冠接入到你的微信之后…
                 </h2>
-                <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-6">
-                  这年头在中国社会挣点钱，光发广告可不行，你得做到顶
-                </p>
-                <div className="flex flex-col md:flex-row justify-center items-center gap-6 text-lg font-bold text-gray-900">
-                  <div className="flex items-center space-x-2">
-                    <span className="text-blue-600">顶级的内容</span>
-                    <span className="text-gray-600">"会说人话"</span>
-                  </div>
-                  <div className="hidden md:block text-gray-300">•</div>
-                  <div className="flex items-center space-x-2">
-                    <span className="text-blue-600">顶级的执行</span>
-                    <span className="text-gray-600">"绝不放弃"</span>
-                  </div>
-                  <div className="hidden md:block text-gray-300">•</div>
-                  <div className="flex items-center space-x-2">
-                    <span className="text-blue-600">顶级的策略</span>
-                    <span className="text-gray-600">"千人千面"</span>
-                  </div>
-                </div>
               </div>
 
-              <div className="grid md:grid-cols-3 gap-8">
-                <div className="group card bg-white border border-gray-200 hover:border-blue-200 hover:shadow-xl transition-all duration-300">
-                  <div className="card-body">
-                    <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-blue-600 transition-colors">
-                      <svg className="w-7 h-7 text-blue-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                      </svg>
+              <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+                {/* Left: Hexagon Radar Chart */}
+                <div className="flex justify-center">
+                  <div className="relative w-96 h-96">
+                    {/* Hexagon SVG */}
+                    <svg viewBox="0 0 400 400" className="w-full h-full">
+                      {/* Background hexagon layers */}
+                      <polygon points="200,40 320,115 320,265 200,340 80,265 80,115" fill="#f0f9ff" stroke="#bfdbfe" strokeWidth="2" opacity="0.3"/>
+                      <polygon points="200,80 280,135 280,245 200,300 120,245 120,135" fill="#dbeafe" stroke="#93c5fd" strokeWidth="2" opacity="0.5"/>
+                      <polygon points="200,120 240,155 240,225 200,260 160,225 160,155" fill="#bfdbfe" stroke="#60a5fa" strokeWidth="2" opacity="0.7"/>
+
+                      {/* Main hexagon - filled area */}
+                      <polygon points="200,50 310,120 310,260 200,330 90,260 90,120" fill="#3b82f6" fillOpacity="0.4" stroke="#2563eb" strokeWidth="3"/>
+
+                      {/* Grid lines */}
+                      <line x1="200" y1="200" x2="200" y2="50" stroke="#94a3b8" strokeWidth="1" strokeDasharray="4"/>
+                      <line x1="200" y1="200" x2="310" y2="120" stroke="#94a3b8" strokeWidth="1" strokeDasharray="4"/>
+                      <line x1="200" y1="200" x2="310" y2="260" stroke="#94a3b8" strokeWidth="1" strokeDasharray="4"/>
+                      <line x1="200" y1="200" x2="200" y2="330" stroke="#94a3b8" strokeWidth="1" strokeDasharray="4"/>
+                      <line x1="200" y1="200" x2="90" y2="260" stroke="#94a3b8" strokeWidth="1" strokeDasharray="4"/>
+                      <line x1="200" y1="200" x2="90" y2="120" stroke="#94a3b8" strokeWidth="1" strokeDasharray="4"/>
+
+                      {/* Labels */}
+                      <text x="200" y="30" textAnchor="middle" className="fill-gray-700 font-bold text-sm">内容能力</text>
+                      <text x="330" y="125" textAnchor="start" className="fill-gray-700 font-bold text-sm">接待能力</text>
+                      <text x="330" y="270" textAnchor="start" className="fill-gray-700 font-bold text-sm">跟进能力</text>
+                      <text x="200" y="365" textAnchor="middle" className="fill-gray-700 font-bold text-sm">输出能力</text>
+                      <text x="70" y="270" textAnchor="end" className="fill-gray-700 font-bold text-sm">执行能力</text>
+                      <text x="70" y="125" textAnchor="end" className="fill-gray-700 font-bold text-sm">省钱能力</text>
+
+                      {/* Value dots */}
+                      <circle cx="200" cy="50" r="6" fill="#2563eb" stroke="white" strokeWidth="2"/>
+                      <circle cx="310" cy="120" r="6" fill="#2563eb" stroke="white" strokeWidth="2"/>
+                      <circle cx="310" cy="260" r="6" fill="#2563eb" stroke="white" strokeWidth="2"/>
+                      <circle cx="200" cy="330" r="6" fill="#2563eb" stroke="white" strokeWidth="2"/>
+                      <circle cx="90" cy="260" r="6" fill="#2563eb" stroke="white" strokeWidth="2"/>
+                      <circle cx="90" cy="120" r="6" fill="#2563eb" stroke="white" strokeWidth="2"/>
+                    </svg>
+
+                    {/* Center badge */}
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                      <div className="bg-blue-600 text-white px-6 py-3 rounded-full font-bold text-lg shadow-lg">
+                        六边形战士
+                      </div>
                     </div>
-                    <h3 className="card-title text-xl text-gray-900">顶级的内容"会说人话"</h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      不是机器人式的官方回复，而是像真人销冠一样，用自然、亲切的语气与客户交流，让客户感受不到任何机器感
-                    </p>
                   </div>
                 </div>
 
-                <div className="group card bg-white border border-gray-200 hover:border-blue-200 hover:shadow-xl transition-all duration-300">
-                  <div className="card-body">
-                    <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-blue-600 transition-colors">
-                      <svg className="w-7 h-7 text-blue-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
+                {/* Right: Capability List */}
+                <div className="space-y-6">
+                  <div className="flex items-start space-x-4 p-4 bg-white rounded-xl border-l-4 border-blue-600 shadow-sm hover:shadow-md transition-shadow">
+                    <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                      <span className="text-2xl">✍️</span>
                     </div>
-                    <h3 className="card-title text-xl text-gray-900">顶级的执行"绝不放弃"</h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      销冠跟进3-5天就放弃，AI销冠可以跟进180天起步，自动触发沉默激活，永不疲惫，永不遗漏任何商机
-                    </p>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-1">内容能力变成销冠级别</h4>
+                      <p className="text-sm text-gray-600">说人话，强杀伤，客户不仅不删，还会来问你东西咋卖</p>
+                    </div>
                   </div>
-                </div>
 
-                <div className="group card bg-white border border-gray-200 hover:border-blue-200 hover:shadow-xl transition-all duration-300">
-                  <div className="card-body">
-                    <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-blue-600 transition-colors">
-                      <svg className="w-7 h-7 text-blue-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                      </svg>
+                  <div className="flex items-start space-x-4 p-4 bg-white rounded-xl border-l-4 border-blue-600 shadow-sm hover:shadow-md transition-shadow">
+                    <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                      <span className="text-2xl">🎯</span>
                     </div>
-                    <h3 className="card-title text-xl text-gray-900">顶级的策略"千人千面"</h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      每个客户的背景、需求、预算都不一样，AI销冠自动判定客户旅程和画像，针对性推送内容，绝不乱发广告
-                    </p>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-1">客户跟进水准对齐销冠</h4>
+                      <p className="text-sm text-gray-600">全自动，全生命周期</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4 p-4 bg-white rounded-xl border-l-4 border-blue-600 shadow-sm hover:shadow-md transition-shadow">
+                    <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                      <span className="text-2xl">📢</span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-1">输出曝光能力生猛无比</h4>
+                      <p className="text-sm text-gray-600">朋友圈每天300-500条，社群同时运营1000+</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4 p-4 bg-white rounded-xl border-l-4 border-blue-600 shadow-sm hover:shadow-md transition-shadow">
+                    <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                      <span className="text-2xl">💬</span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-1">客户接待能力直接拉满</h4>
+                      <p className="text-sm text-gray-600">7x24小时不吃饭不休息没情绪，秒回不是问题，接待没有上限</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4 p-4 bg-white rounded-xl border-l-4 border-blue-600 shadow-sm hover:shadow-md transition-shadow">
+                    <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                      <span className="text-2xl">⚡</span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-1">执行能力一夜成销冠</h4>
+                      <p className="text-sm text-gray-600">AI销冠全自动，一夜之间成为销冠</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4 p-4 bg-white rounded-xl border-l-4 border-blue-600 shadow-sm hover:shadow-md transition-shadow">
+                    <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                      <span className="text-2xl">💰</span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-1">人力成本直接降到冰点</h4>
+                      <p className="text-sm text-gray-600">你不再需要招人、管人、带人、盯人了</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -609,18 +655,219 @@ export default function Home() {
                 </div>
               </div>
 
+              {/* 效果对比展示 */}
+              <div className="max-w-6xl mx-auto mt-16 mb-16 space-y-12">
+                <div className="text-center mb-12">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    先看看差距有多大 👇
+                  </h3>
+                  <p className="text-gray-600">对比一下就知道，销冠级别到底强在哪里</p>
+                </div>
+
+                {/* 对比1: 内容水准 */}
+                <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+                  <h4 className="text-xl font-bold text-gray-900 mb-6 text-center">
+                    ① 内容水准对比
+                  </h4>
+
+                  {/* 上下布局更适合横长图 */}
+                  <div className="space-y-8">
+                    {/* 上方：大盘内容（横长图） */}
+                    <div className="space-y-3">
+                      <div className="bg-red-50 border-2 border-red-200 rounded-lg p-4 text-center">
+                        <p className="text-sm font-bold text-red-800 mb-3">❌ 大盘的内容水准（也可能是你现在的内容风格）：送人头炮灰级别</p>
+                        <div className="bg-white rounded-lg p-3 border-2 border-red-300 overflow-hidden">
+                          <img
+                            src="/content-comparison-normal.png"
+                            alt="大盘的内容水准对比"
+                            className="w-full h-auto object-contain"
+                          />
+                        </div>
+                        <p className="text-xs text-red-600 mt-3 italic">太直、太长、太花、太闲、太盘</p>
+                      </div>
+                    </div>
+
+                    {/* 中间：VS标记 */}
+                    <div className="flex justify-center -my-4 relative z-10">
+                      <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-3 rounded-full font-bold text-2xl shadow-xl">
+                        VS
+                      </div>
+                    </div>
+
+                    {/* 下方：销冠内容（模糊） */}
+                    <div className="space-y-3">
+                      <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-4 text-center relative">
+                        <p className="text-sm font-bold text-blue-800 mb-3">✅ 销冠的内容水准</p>
+                        <div className="relative bg-white rounded-lg p-3 border-2 border-blue-300 overflow-hidden" style={{minHeight: '280px'}}>
+                          {/* 模糊效果背景 */}
+                          <div className="absolute inset-0 bg-gradient-to-br from-blue-200 via-blue-100 to-blue-50 opacity-50"></div>
+                          {/* 锁定提示 */}
+                          <div className="absolute inset-0 backdrop-blur-lg bg-blue-100/60 flex items-center justify-center">
+                            <div className="text-center">
+                              <div className="text-5xl mb-4">🔒</div>
+                              <p className="text-lg font-bold text-blue-900 mb-2">销冠级别内容</p>
+                              <p className="text-sm text-blue-700">填表后解锁查看</p>
+                              <p className="text-xs text-blue-600 mt-3">说人话 · 强杀伤 · 客户主动问</p>
+                            </div>
+                          </div>
+                        </div>
+                        {/* 神秘光效 */}
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-blue-400/20 rounded-full blur-3xl animate-pulse"></div>
+                        <div className="absolute bottom-0 left-0 w-24 h-24 bg-purple-400/15 rounded-full blur-2xl animate-pulse" style={{animationDelay: '1s'}}></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 对比2: 跟进水准 */}
+                <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+                  <h4 className="text-xl font-bold text-gray-900 mb-6 text-center">
+                    ② 跟进水准对比
+                  </h4>
+                  <div className="grid md:grid-cols-2 gap-6 items-center relative">
+                    {/* 左侧：普通跟进 */}
+                    <div className="space-y-3">
+                      <div className="bg-red-50 border-2 border-red-200 rounded-lg p-4 text-center">
+                        <p className="text-sm font-bold text-red-800 mb-3">❌ 普通销售的跟进水准</p>
+                        <div className="bg-white rounded-lg p-3 border-2 border-red-300 overflow-hidden flex justify-center">
+                          <img
+                            src="/followup-comparison-normal.png"
+                            alt="普通销售的跟进水准"
+                            className="max-w-full h-auto object-contain"
+                            style={{maxHeight: '400px'}}
+                          />
+                        </div>
+                        <p className="text-xs text-red-600 mt-3 italic">硬推销、促销话术、催单</p>
+                      </div>
+                    </div>
+
+                    {/* 中间：VS */}
+                    <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 z-10">
+                      <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-full font-bold text-2xl shadow-xl">
+                        VS
+                      </div>
+                    </div>
+
+                    {/* 右侧：销冠跟进（模糊） */}
+                    <div className="space-y-3">
+                      <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-4 text-center relative">
+                        <p className="text-sm font-bold text-blue-800 mb-3">✅ 销冠级别的跟进水准</p>
+                        <div className="relative bg-white rounded-lg p-3 border-2 border-blue-300 overflow-hidden" style={{minHeight: '400px'}}>
+                          {/* 模糊效果背景 */}
+                          <div className="absolute inset-0 bg-gradient-to-br from-blue-200 via-blue-100 to-blue-50 opacity-50"></div>
+                          {/* 锁定提示 */}
+                          <div className="absolute inset-0 backdrop-blur-lg bg-blue-100/60 flex items-center justify-center">
+                            <div className="text-center px-4">
+                              <div className="text-5xl mb-4">🔒</div>
+                              <p className="text-lg font-bold text-blue-900 mb-2">销冠级别跟进</p>
+                              <p className="text-sm text-blue-700">填表后解锁查看</p>
+                              <p className="text-xs text-blue-600 mt-3">全自动 · 全生命周期 · 永不放弃</p>
+                            </div>
+                          </div>
+                        </div>
+                        {/* 神秘光效 */}
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-blue-400/20 rounded-full blur-3xl animate-pulse"></div>
+                        <div className="absolute bottom-0 left-0 w-24 h-24 bg-purple-400/15 rounded-full blur-2xl animate-pulse" style={{animationDelay: '1s'}}></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 对比3: 客户跟进策略 */}
+                <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+                  <h4 className="text-xl font-bold text-gray-900 mb-6 text-center">
+                    ③ 客户跟进策略对比
+                  </h4>
+                  <div className="grid md:grid-cols-2 gap-6 items-center relative">
+                    {/* 左侧：普通策略 */}
+                    <div className="space-y-3">
+                      <div className="bg-red-50 border-2 border-red-200 rounded-lg p-4 text-center">
+                        <p className="text-sm font-bold text-red-800 mb-3">❌ 普通销售的客户跟进策略</p>
+                        <div className="bg-white rounded-lg p-3 border-2 border-red-300 overflow-hidden flex justify-center">
+                          <img
+                            src="/strategy-comparison-normal.png"
+                            alt="普通销售的客户跟进策略"
+                            className="max-w-full h-auto object-contain"
+                            style={{maxHeight: '400px'}}
+                          />
+                        </div>
+                        <p className="text-xs text-red-600 mt-3 italic">群发广告、表情符号轰炸、没有针对性</p>
+                      </div>
+                    </div>
+
+                    {/* 中间：VS */}
+                    <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 z-10">
+                      <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-full font-bold text-2xl shadow-xl">
+                        VS
+                      </div>
+                    </div>
+
+                    {/* 右侧：销冠策略（模糊） */}
+                    <div className="space-y-3">
+                      <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-4 text-center relative">
+                        <p className="text-sm font-bold text-blue-800 mb-3">✅ 销冠级别的客户跟进策略</p>
+                        <div className="relative bg-white rounded-lg p-3 border-2 border-blue-300 overflow-hidden" style={{minHeight: '400px'}}>
+                          {/* 模糊效果背景 */}
+                          <div className="absolute inset-0 bg-gradient-to-br from-blue-200 via-blue-100 to-blue-50 opacity-50"></div>
+                          {/* 锁定提示 */}
+                          <div className="absolute inset-0 backdrop-blur-lg bg-blue-100/60 flex items-center justify-center">
+                            <div className="text-center px-4">
+                              <div className="text-5xl mb-4">🔒</div>
+                              <p className="text-lg font-bold text-blue-900 mb-2">销冠级别策略</p>
+                              <p className="text-sm text-blue-700">填表后解锁查看</p>
+                              <p className="text-xs text-blue-600 mt-3">千人千面 · 精准推送 · 不乱发广告</p>
+                            </div>
+                          </div>
+                        </div>
+                        {/* 神秘光效 */}
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-blue-400/20 rounded-full blur-3xl animate-pulse"></div>
+                        <div className="absolute bottom-0 left-0 w-24 h-24 bg-purple-400/15 rounded-full blur-2xl animate-pulse" style={{animationDelay: '1s'}}></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="text-center mt-12">
+                  <p className="text-lg text-gray-600 mb-4">
+                    想看销冠级别的具体内容？ 👇
+                  </p>
+                </div>
+              </div>
+
               <div className="text-center">
                 <p className="text-xl font-bold text-gray-900 mb-8">
                   填写表单，审核通过后我们来安排实际体验
                 </p>
 
-                {/* QR Code Placeholder */}
-                <div className="inline-block bg-gray-100 rounded-2xl p-8 border-2 border-dashed border-gray-300">
-                  <div className="w-64 h-64 bg-white rounded-xl flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="text-6xl mb-4">📱</div>
-                      <p className="text-gray-500 font-medium">扫码填写表单</p>
-                      <p className="text-gray-400 text-sm mt-2">体验预约二维码</p>
+                {/* Experience QR Code */}
+                <div className="inline-block bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl p-8 border-2 border-yellow-300 shadow-lg">
+                  <div className="bg-white rounded-xl p-6 shadow-inner">
+                    <div className="mb-4">
+                      <div className="inline-flex items-center justify-center w-full">
+                        <div className="bg-yellow-500 text-white px-4 py-2 rounded-lg flex items-center space-x-2 shadow-md">
+                          <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                          </svg>
+                          <span className="font-bold">鲸奇【AI销冠】智能体咨询</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="w-80 h-80 mx-auto bg-white rounded-xl flex items-center justify-center border-2 border-gray-200">
+                      <img
+                        src="/experience-qrcode.png"
+                        alt="鲸奇AI销冠体验预约二维码"
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+
+                    <div className="mt-6 space-y-2">
+                      <p className="text-gray-600 text-sm">扫一扫二维码打开或分享给好友</p>
+                      <div className="flex items-center justify-center space-x-2 text-blue-600">
+                        <span className="text-2xl">📱</span>
+                        <p className="font-bold text-lg">扫码填写表单</p>
+                      </div>
+                      <p className="text-gray-500 text-xs">体验预约二维码</p>
                     </div>
                   </div>
                 </div>
@@ -1064,15 +1311,25 @@ export default function Home() {
                   别再买课和工具了亲，大清已亡
                 </p>
 
-                {/* QR Code Placeholder */}
+                {/* Contact QR Code */}
                 <div className="inline-block bg-white rounded-3xl p-8 shadow-2xl">
-                  <div className="w-64 h-64 bg-gray-100 rounded-2xl flex flex-col items-center justify-center border-4 border-dashed border-gray-300">
-                    <svg className="w-16 h-16 text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
-                    </svg>
-                    <p className="text-gray-500 font-semibold text-lg">扫码填写表单</p>
-                    <p className="text-gray-400 text-sm mt-2">QR Code Placeholder</p>
+                  <div className="mb-4">
+                    <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-xl flex items-center justify-center space-x-2 shadow-md">
+                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span className="font-bold text-lg">鲸奇【AI销冠】智能体咨询</span>
+                    </div>
                   </div>
+
+                  <div className="w-80 h-80 bg-white rounded-2xl flex items-center justify-center border-2 border-gray-200 overflow-hidden">
+                    <img
+                      src="/experience-qrcode.png"
+                      alt="扫码咨询鲸奇AI销冠"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+
                   <p className="text-gray-900 font-bold text-lg mt-6">
                     扫码咨询，96小时极速落地
                   </p>
