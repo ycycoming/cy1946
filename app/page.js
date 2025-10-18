@@ -1016,28 +1016,36 @@ export default function Home() {
 
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {[
-                  { icon: "✍️", title: "内容智能体", desc: "输出销冠级别的说人话、强杀伤内容" },
-                  { icon: "🎬", title: "IP智能体", desc: "套个爆款，直接模仿+洗稿，一气呵成" },
-                  { icon: "💬", title: "客服智能体", desc: "24/7在线先不说，人味儿真拉满" },
-                  { icon: "📊", title: "销冠复刻智能体", desc: "能主动找客户说话的智能体，你可见过？\n（你的Deepseek可没找你说过话吧？）" },
-                  { icon: "📱", title: "社群智能体", desc: "嗯，你的一万个群，有救了，招人得要20个运营，或者我的一个AI" },
-                  { icon: "📰", title: "朋友圈智能体", desc: "正常人一天3条朋友圈不得了，智能体？300-500条" },
-                  { icon: "📕", title: "小红书智能体", desc: "帮你的小红书起号、追踪爆款、代理发帖以及嗯，洗别人的稿" },
-                  { icon: "🎯", title: "兴趣培育智能体", desc: "让客户对你的东西眼前一亮" },
-                  { icon: "💡", title: "需求培育智能体", desc: "让客户主动来问你东西咋卖" },
-                  { icon: "🤝", title: "信任培育智能体", desc: "让客户对你没有防备心" },
-                  { icon: "🔔", title: "沉默激活智能体", desc: "适时激活你的沉默客户" },
+                  { icon: "✍️", title: "内容智能体", desc: "输出销冠级别的说人话、强杀伤内容", link: "https://mp.weixin.qq.com/s/bqWJNtdKHk-GMsdTA5LGMQ" },
+                  { icon: "🎬", title: "IP智能体", desc: "套个爆款，直接模仿+洗稿，一气呵成", link: "https://mp.weixin.qq.com/s/ZK8fMDWyC__agmdcB_TxBw" },
+                  { icon: "💬", title: "客服智能体", desc: "24/7在线先不说，人味儿真拉满", link: "https://mp.weixin.qq.com/s/NUc7YpfqMyZ-Wse_xKIOmA" },
+                  { icon: "📊", title: "销冠复刻智能体", desc: "能主动找客户说话的智能体，你可见过？\n（你的Deepseek可没找你说过话吧？）", link: "https://mp.weixin.qq.com/s/_nVMMV6Wx_pFK5WJfrBffA" },
+                  { icon: "📱", title: "社群智能体", desc: "嗯，你的一万个群，有救了，招人得要20个运营，或者我的一个AI", link: "https://mp.weixin.qq.com/s/pkmwiUf8qe8Tke1oFS6Jjw" },
+                  { icon: "📰", title: "朋友圈智能体", desc: "正常人一天3条朋友圈不得了，智能体？300-500条", link: "https://mp.weixin.qq.com/s/_Rt0dAx0QkKqRdgBHyMDUQ" },
+                  { icon: "📕", title: "小红书智能体", desc: "帮你的小红书起号、追踪爆款、代理发帖以及嗯，洗别人的稿", link: "https://mp.weixin.qq.com/s/ZK8fMDWyC__agmdcB_TxBw" },
+                  { icon: "🎯", title: "兴趣培育智能体", desc: "让客户对你的东西眼前一亮", link: "https://mp.weixin.qq.com/s/J4MLKkjbmXhh3asiSn1S2Q" },
+                  { icon: "💡", title: "需求培育智能体", desc: "让客户主动来问你东西咋卖", link: "https://mp.weixin.qq.com/s/LGU3ugeWQTtmiiIslkxkHA" },
+                  { icon: "🤝", title: "信任培育智能体", desc: "让客户对你没有防备心", link: "https://mp.weixin.qq.com/s/uk72Tm8GuiKhz2HRVg9Qgw" },
+                  { icon: "🔔", title: "沉默激活智能体", desc: "适时激活你的沉默客户", link: "https://mp.weixin.qq.com/s/MVSo_cj2pv6qb3sIRz3mqg" },
                 ].map((employee, index) => (
                   <div
                     key={index}
-                    className="card bg-white border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300 group cursor-pointer"
+                    className="card bg-white border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300 group"
                   >
                     <div className="card-body items-center text-center">
                       <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
                         {employee.icon}
                       </div>
-                      <h4 className="font-bold text-gray-900">{employee.title}</h4>
-                      <p className="text-sm text-gray-600 whitespace-pre-line">{employee.desc}</p>
+                      <h4 className="font-bold text-gray-900 mb-2">{employee.title}</h4>
+                      <p className="text-sm text-gray-600 whitespace-pre-line mb-4">{employee.desc}</p>
+                      <Link
+                        href={employee.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-sm bg-blue-600 hover:bg-blue-700 text-white border-0 normal-case w-full"
+                      >
+                        实战复盘 →
+                      </Link>
                     </div>
                   </div>
                 ))}
