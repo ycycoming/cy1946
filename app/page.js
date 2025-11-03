@@ -48,17 +48,20 @@ export default function Home() {
                 <span className="text-xl font-bold text-gray-900">{config.appName}</span>
               </div>
               <nav className="hidden md:flex items-center space-x-8">
-                <Link href="#how-it-works" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
-                  效果
+                <Link href="/" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
+                  AI销冠
                 </Link>
-                <Link href="#experience" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
-                  实际体验
+                <Link href="/ai-customer-service" className="text-gray-600 hover:text-orange-600 transition-colors font-medium">
+                  AI客服
                 </Link>
-                <Link href="#pricing" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
-                  定价
+                <Link href="/ai-operations" className="text-gray-600 hover:text-purple-600 transition-colors font-medium">
+                  AI运营
                 </Link>
-                <Link href="#employees" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
-                  生猛智能体
+                <Link href="/ai-acquisition" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+                  AI获客
+                </Link>
+                <Link href="/geo" className="text-gray-600 hover:text-cyan-600 transition-colors font-medium">
+                  GEO
                 </Link>
               </nav>
               <div className="flex items-center space-x-3">
