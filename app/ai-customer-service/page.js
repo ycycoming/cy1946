@@ -525,6 +525,175 @@ export default function AICustomerService() {
           </div>
         </section>
 
+        {/* 交付和落地流程 */}
+        <section className="py-24 bg-white border-t border-gray-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                交付和落地流程
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                从需求沟通到正式上线，全程陪伴，7-14天快速落地
+              </p>
+            </div>
+
+            <div className="relative">
+              {/* 连接线 */}
+              <div className="hidden md:block absolute top-20 left-0 right-0 h-0.5 bg-gradient-to-r from-orange-200 via-orange-400 to-orange-200"></div>
+
+              <div className="grid md:grid-cols-4 gap-8 relative">
+                {/* 步骤1 */}
+                <div className="relative">
+                  <div className="bg-white p-6 rounded-2xl border-2 border-orange-200 hover:border-orange-400 hover:shadow-xl transition-all duration-300 relative z-10">
+                    <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-4 mx-auto shadow-lg">
+                      <span className="text-2xl font-bold text-white">1</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">需求沟通</h3>
+                    <p className="text-sm text-gray-600 text-center leading-relaxed">
+                      深入了解你的业务场景、客户画像、常见问题，确定AI客服的定位和目标
+                    </p>
+                    <div className="mt-4 pt-4 border-t border-gray-100">
+                      <p className="text-xs text-orange-600 font-semibold text-center">1-2天</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 步骤2 */}
+                <div className="relative">
+                  <div className="bg-white p-6 rounded-2xl border-2 border-orange-200 hover:border-orange-400 hover:shadow-xl transition-all duration-300 relative z-10">
+                    <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-4 mx-auto shadow-lg">
+                      <span className="text-2xl font-bold text-white">2</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">方案设计</h3>
+                    <p className="text-sm text-gray-600 text-center leading-relaxed">
+                      设计AI客服的话术风格、对话流程、转人工规则，定制专属方案
+                    </p>
+                    <div className="mt-4 pt-4 border-t border-gray-100">
+                      <p className="text-xs text-orange-600 font-semibold text-center">2-3天</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 步骤3 */}
+                <div className="relative">
+                  <div className="bg-white p-6 rounded-2xl border-2 border-orange-200 hover:border-orange-400 hover:shadow-xl transition-all duration-300 relative z-10">
+                    <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-4 mx-auto shadow-lg">
+                      <span className="text-2xl font-bold text-white">3</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">知识库搭建</h3>
+                    <p className="text-sm text-gray-600 text-center leading-relaxed">
+                      整理产品资料、常见问答、销售话术，构建AI客服的知识体系
+                    </p>
+                    <div className="mt-4 pt-4 border-t border-gray-100">
+                      <p className="text-xs text-orange-600 font-semibold text-center">2-3天</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 步骤4 */}
+                <div className="relative">
+                  <div className="bg-white p-6 rounded-2xl border-2 border-orange-200 hover:border-orange-400 hover:shadow-xl transition-all duration-300 relative z-10">
+                    <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-4 mx-auto shadow-lg">
+                      <span className="text-2xl font-bold text-white">4</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">接入配置</h3>
+                    <p className="text-sm text-gray-600 text-center leading-relaxed">
+                      在你的微信/企微/公众号上接入AI客服，完成技术对接和权限配置
+                    </p>
+                    <div className="mt-4 pt-4 border-t border-gray-100">
+                      <p className="text-xs text-orange-600 font-semibold text-center">1-2天</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* 第二排 */}
+              <div className="grid md:grid-cols-3 gap-8 mt-8 max-w-5xl mx-auto">
+                {/* 步骤5 */}
+                <div className="relative">
+                  <div className="bg-white p-6 rounded-2xl border-2 border-orange-200 hover:border-orange-400 hover:shadow-xl transition-all duration-300">
+                    <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-4 mx-auto shadow-lg">
+                      <span className="text-2xl font-bold text-white">5</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">测试优化</h3>
+                    <p className="text-sm text-gray-600 text-center leading-relaxed">
+                      模拟真实对话场景，测试AI回复质量，根据反馈持续优化调整
+                    </p>
+                    <div className="mt-4 pt-4 border-t border-gray-100">
+                      <p className="text-xs text-orange-600 font-semibold text-center">2-3天</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 步骤6 */}
+                <div className="relative">
+                  <div className="bg-white p-6 rounded-2xl border-2 border-orange-200 hover:border-orange-400 hover:shadow-xl transition-all duration-300">
+                    <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-4 mx-auto shadow-lg">
+                      <span className="text-2xl font-bold text-white">6</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">正式上线</h3>
+                    <p className="text-sm text-gray-600 text-center leading-relaxed">
+                      确认无误后正式启用AI客服，开始7×24小时自动接待客户
+                    </p>
+                    <div className="mt-4 pt-4 border-t border-gray-100">
+                      <p className="text-xs text-orange-600 font-semibold text-center">1天</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 步骤7 */}
+                <div className="relative">
+                  <div className="bg-white p-6 rounded-2xl border-2 border-orange-200 hover:border-orange-400 hover:shadow-xl transition-all duration-300">
+                    <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-4 mx-auto shadow-lg">
+                      <span className="text-2xl font-bold text-white">7</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">持续迭代</h3>
+                    <p className="text-sm text-gray-600 text-center leading-relaxed">
+                      根据实际对话数据和客户反馈，持续优化AI话术和知识库
+                    </p>
+                    <div className="mt-4 pt-4 border-t border-gray-100">
+                      <p className="text-xs text-orange-600 font-semibold text-center">长期</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* 服务保障 */}
+            <div className="mt-16 bg-gradient-to-br from-orange-50 to-white p-8 rounded-2xl border border-orange-100">
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <div className="w-14 h-14 bg-orange-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <h4 className="font-bold text-gray-900 mb-2">快速交付</h4>
+                  <p className="text-sm text-gray-600">7-14天完成交付<br />最快3天可上线</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-14 h-14 bg-orange-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                  </div>
+                  <h4 className="font-bold text-gray-900 mb-2">专属服务</h4>
+                  <p className="text-sm text-gray-600">1对1项目经理<br />全程跟进服务</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-14 h-14 bg-orange-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                  </div>
+                  <h4 className="font-bold text-gray-900 mb-2">满意保障</h4>
+                  <p className="text-sm text-gray-600">不满意全额退款<br />零风险尝试</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* 定价方案 */}
         <section id="pricing" className="py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
