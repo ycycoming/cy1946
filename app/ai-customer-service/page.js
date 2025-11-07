@@ -530,10 +530,10 @@ export default function AICustomerService() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                交付和落地流程
+                96小时极速落地，一点不拖泥带水
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                从需求沟通到正式上线，全程陪伴，7-14天快速落地
+                24小时喂资料，48小时调效果，72小时接私域，96小时就上线
               </p>
             </div>
 
