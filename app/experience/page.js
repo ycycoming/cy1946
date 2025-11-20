@@ -14,7 +14,7 @@ const EXPERIENCE_STEPS = [
       instruction: "现在，请添加我的AI客服，并随便和它说句话，等待它的自动回复。",
       action: "接入私域（企微个微均可）和自动回复能力开启，由鲸奇帮你完成。我们先调好AI客服，接入也就一杯咖啡的功夫。",
     },
-    qrCode: "/ai-customer-service-qrcode.png",
+    qrCode: "/li.jpg",
   },
   {
     id: 2,
@@ -492,7 +492,7 @@ export default function AICustomerServiceExperience() {
                 <div className="flex flex-col items-center justify-center py-6 bg-white rounded-lg border-2 border-dashed border-gray-300">
                   <div className="bg-white p-4 rounded-xl shadow-lg border-2 border-green-200">
                     <img
-                      src="/experience-qrcode.png"
+                      src="/cy.jpg"
                       alt="商务顾问二维码"
                       className="w-64 h-64"
                     />
