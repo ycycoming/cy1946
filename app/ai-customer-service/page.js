@@ -537,94 +537,179 @@ export default function AICustomerService() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-              {/* 基础版 */}
+              {/* 人类平替版 */}
               <div className="bg-white p-8 rounded-2xl border-2 border-gray-200 hover:border-orange-300 transition-all">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">基础版</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">人类平替版</h3>
                 <div className="mb-6">
-                  <span className="text-4xl font-bold text-gray-900">¥6,800</span>
-                  <span className="text-gray-600">/年</span>
+                  <span className="text-4xl font-bold text-gray-900">¥500</span>
+                  <span className="text-gray-600">/月</span>
                 </div>
                 <p className="text-sm text-gray-600 mb-6">
-                  嗯也就相当于你原本人类客服一个月的工资。。
+                  1/10的成本，超越人类的专业能力
                 </p>
-                <ul className="space-y-3 mb-8">
+
+                {/* 工作限制 - 模拟人类 */}
+                <div className="mb-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
+                  <h4 className="font-semibold text-gray-900 mb-3 text-sm">⏰ 工作时间（模拟人类客服）</h4>
+                  <ul className="space-y-2 text-sm text-gray-600">
+                    <li className="flex items-start">
+                      <span className="text-orange-600 mr-2">•</span>
+                      每天工作10小时（人类极限）
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-orange-600 mr-2">•</span>
+                      同时接待10个客户（人类极限+1）
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-orange-600 mr-2">•</span>
+                      每周休息1天
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-orange-600 mr-2">•</span>
+                      晚11点-早7点休息，不做夜班
+                    </li>
+                  </ul>
+                </div>
+
+                {/* 功能特性 */}
+                <ul className="space-y-3 mb-6">
                   <li className="flex items-start">
-                    <svg className="w-5 h-5 text-orange-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                     </svg>
-                    <span className="text-gray-600">仅支持接入一个平台（个微、企微、公众号三选一）</span>
+                    <span className="text-gray-900 font-medium">✓ 自动回复能力</span>
                   </li>
                   <li className="flex items-start">
-                    <svg className="w-5 h-5 text-orange-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                     </svg>
-                    <span className="text-gray-600">仅支持1个知识库</span>
+                    <span className="text-gray-900 font-medium">✓ AI说人话能力</span>
                   </li>
                   <li className="flex items-start">
-                    <svg className="w-5 h-5 text-orange-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                     </svg>
-                    <span className="text-gray-600">接入私域服务费2000/次/平台</span>
+                    <span className="text-gray-900 font-medium">✓ AI咨询师能力</span>
                   </li>
                   <li className="flex items-start">
-                    <svg className="w-5 h-5 text-orange-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    <svg className="w-5 h-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
                     </svg>
-                    <span className="text-gray-600">默认支持接入2个号，不够再加，一个月300，是你人工成本的1/20</span>
+                    <span className="text-gray-500">✗ 主动跟进能力</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-gray-500">✗ 沉默激活能力</span>
                   </li>
                 </ul>
+
+                {/* 接入限制 */}
+                <ul className="space-y-2 text-sm text-gray-600 mb-6">
+                  <li className="flex items-start">
+                    <span className="text-orange-600 mr-2">•</span>
+                    仅支持1个平台（企微或个微二选一）
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-orange-600 mr-2">•</span>
+                    仅支持1个场景（售前/售中/售后三选一）
+                  </li>
+                  <li className="flex items-start font-semibold text-gray-900">
+                    <span className="text-orange-600 mr-2">💰</span>
+                    按月购买需支付接入服务费 ¥3,000/平台/次
+                  </li>
+                </ul>
+
                 <Link href="https://doc.weixin.qq.com/forms/AGMAagcLAAcAD4APQY0AMgCNQANhK63Ff?page=1" target="_blank" rel="noopener noreferrer" className="btn btn-outline w-full normal-case">
-                  人类一个月工资拿下AI客服，全年！
+                  人类客服1/10成本，专业能力拉满
                 </Link>
               </div>
 
-              {/* 旗舰版 - 推荐 */}
+              {/* 全知全能版 - 推荐 */}
               <div className="bg-orange-600 p-8 rounded-2xl border-2 border-orange-700 shadow-xl transform scale-105 relative">
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-orange-700 text-white px-4 py-1 rounded-full text-sm font-medium">
                   最受欢迎
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-2">旗舰版</h3>
-                <div className="mb-6">
-                  <span className="text-4xl font-bold text-white">¥19,800</span>
-                  <span className="text-orange-100">/年</span>
+                <h3 className="text-2xl font-bold text-white mb-2">全知全能版</h3>
+                <div className="mb-4">
+                  <div className="mb-2">
+                    <span className="text-4xl font-bold text-white">¥2,000</span>
+                    <span className="text-orange-100">/月</span>
+                  </div>
+                  <div className="text-orange-100 text-sm">
+                    或 <span className="text-2xl font-bold text-white">¥19,800</span>/年 <span className="font-semibold">(免接入费)</span>
+                  </div>
                 </div>
                 <p className="text-sm text-orange-100 mb-6">
-                  2w块钱可能都不够你开除员工赔钱的。。AI能给你干一年客服。
+                  顶替3-5个人类员工（销冠+咨询师+客服），全年无休
                 </p>
-                <ul className="space-y-3 mb-8">
+
+                {/* 无限制工作 */}
+                <div className="mb-6 p-4 bg-orange-700/50 rounded-lg border border-orange-500">
+                  <h4 className="font-semibold text-white mb-3 text-sm">🚀 全天候无限制</h4>
+                  <ul className="space-y-2 text-sm text-orange-50">
+                    <li className="flex items-start">
+                      <span className="text-white mr-2">✓</span>
+                      7×24×365 无休干活，周末节假日全在线
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-white mr-2">✓</span>
+                      无上限并发接待，1万客户同时咨询都能应付
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-white mr-2">✓</span>
+                      不限工作时长，永不疲惫
+                    </li>
+                  </ul>
+                </div>
+
+                {/* 全部功能 */}
+                <ul className="space-y-3 mb-6">
                   <li className="flex items-start">
                     <svg className="w-5 h-5 text-white mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                     </svg>
-                    <span className="text-orange-50">不限平台接入</span>
+                    <span className="text-white font-medium">🎯 AI销冠能力（主动跟进+成交）</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 text-white mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                     </svg>
-                    <span className="text-orange-50">不限知识库</span>
+                    <span className="text-white font-medium">💡 AI咨询师能力（专业指导）</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 text-white mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                     </svg>
-                    <span className="text-orange-50">免收接入服务费</span>
+                    <span className="text-white font-medium">🤖 AI客服能力（自动接待）</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 text-white mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                     </svg>
-                    <span className="text-orange-50">默认支持接入5个号，不够再加，一个月300，是你人工成本的1/20</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-white mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-orange-50">附赠【AI销冠】一个接入资格，全自动「主动」跟进客户（和AI客服互补）</span>
+                    <span className="text-white font-medium">🔥 主动跟进 + 沉默激活</span>
                   </li>
                 </ul>
+
+                {/* 多平台多场景 */}
+                <ul className="space-y-2 text-sm text-orange-50 mb-6">
+                  <li className="flex items-start">
+                    <span className="text-white mr-2">•</span>
+                    不限平台（企微、个微、公众号、WhatsApp全支持）
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-white mr-2">•</span>
+                    不限场景（售前、售中、售后全覆盖）
+                  </li>
+                  <li className="flex items-start font-semibold text-white">
+                    <span className="mr-2">💎</span>
+                    年付免接入费，月付也可灵活选择
+                  </li>
+                </ul>
+
                 <Link href="https://doc.weixin.qq.com/forms/AGMAagcLAAcAD4APQY0AMgCNQANhK63Ff?page=1" target="_blank" rel="noopener noreferrer" className="btn bg-white text-orange-600 hover:bg-orange-50 w-full border-0 normal-case">
-                  有条件肯定上旗舰版啊，直接拉满
+                  顶替3-5个员工，有条件直接拉满
                 </Link>
               </div>
             </div>
