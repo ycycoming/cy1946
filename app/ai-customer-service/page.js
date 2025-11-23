@@ -541,11 +541,11 @@ export default function AICustomerService() {
               <div className="bg-white p-8 rounded-2xl border-2 border-gray-200 hover:border-orange-300 transition-all">
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">人类平替版</h3>
                 <div className="mb-6">
-                  <span className="text-4xl font-bold text-gray-900">¥500</span>
+                  <span className="text-4xl font-bold text-gray-900">¥680</span>
                   <span className="text-gray-600">/月</span>
                 </div>
                 <p className="text-sm text-gray-600 mb-6">
-                  1/10的成本，超越人类的专业能力
+                  1/10的成本（人类客服6800一个月要的），干活接客是你的人工客服的10倍，不止
                 </p>
 
                 {/* 工作限制 - 模拟人类 */}
@@ -622,7 +622,7 @@ export default function AICustomerService() {
                 </ul>
 
                 <Link href="https://doc.weixin.qq.com/forms/AGMAagcLAAcAD4APQY0AMgCNQANhK63Ff?page=1" target="_blank" rel="noopener noreferrer" className="btn btn-outline w-full normal-case">
-                  人类客服1/10成本，专业能力拉满
+                  人类1/10成本，干活十倍不止
                 </Link>
               </div>
 
@@ -634,7 +634,7 @@ export default function AICustomerService() {
                 <h3 className="text-2xl font-bold text-white mb-2">全知全能版</h3>
                 <div className="mb-4">
                   <div className="mb-2">
-                    <span className="text-4xl font-bold text-white">¥2,000</span>
+                    <span className="text-4xl font-bold text-white">¥2,400</span>
                     <span className="text-orange-100">/月</span>
                   </div>
                   <div className="text-orange-100 text-sm">
@@ -709,7 +709,7 @@ export default function AICustomerService() {
                 </ul>
 
                 <Link href="https://doc.weixin.qq.com/forms/AGMAagcLAAcAD4APQY0AMgCNQANhK63Ff?page=1" target="_blank" rel="noopener noreferrer" className="btn bg-white text-orange-600 hover:bg-orange-50 w-full border-0 normal-case">
-                  顶替3-5个员工，有条件直接拉满
+                  客服+销售+咨询全拿下，战斗力拉满
                 </Link>
               </div>
             </div>
