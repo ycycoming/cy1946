@@ -33,7 +33,7 @@ export default function EnterPage() {
         localStorage.setItem("entered", "true");
 
         // 跳转到体验页面
-        router.push("/experience");
+        router.push("/aikf-exp");
       } else {
         setError(data.error || "邀请码验证失败");
       }

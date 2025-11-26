@@ -51,10 +51,13 @@ export default function Home() {
                 <Link href="/" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
                   AI销冠
                 </Link>
-                <Link href="/ai-customer-service" className="text-gray-600 hover:text-orange-600 transition-colors font-medium">
+                <Link href="/aikf" className="text-gray-600 hover:text-orange-600 transition-colors font-medium">
                   AI客服
                 </Link>
-                <Link href="/ai-operations" className="text-gray-600 hover:text-purple-600 transition-colors font-medium">
+                <Link href="/aigw" className="text-gray-600 hover:text-purple-600 transition-colors font-medium">
+                  AI顾问
+                </Link>
+                <Link href="/ai-operations" className="text-gray-600 hover:text-pink-600 transition-colors font-medium">
                   AI运营
                 </Link>
                 <Link href="/ai-acquisition" className="text-gray-600 hover:text-green-600 transition-colors font-medium">

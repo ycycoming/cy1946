@@ -5,7 +5,7 @@ import config from "@/config";
 export const metadata = getSEOTags({
   title: `AI客服 - 24/7智能客户服务 | ${config.appName}`,
   description: "鲸奇AI客服提供24小时全天候智能客户服务，自动应答、智能引导、高效转化。让AI替您接待每一位客户，提升满意度，降低人力成本。",
-  canonicalUrlRelative: "/ai-customer-service",
+  canonicalUrlRelative: "/aikf",
   keywords: ["AI客服", "智能客服", "自动回复", "客户服务", "私域客服", "24小时客服"],
 });
 
