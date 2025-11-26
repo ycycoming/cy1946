@@ -228,10 +228,12 @@ export default function AIConsultant() {
                         扫码关注我们的视频号，找到最近的一场直播来听。
                       </p>
                       <div className="flex justify-center">
-                        <div className="bg-white p-4 rounded-lg border-2 border-dashed border-purple-300">
-                          <div className="w-32 h-32 bg-gray-100 rounded flex items-center justify-center text-gray-400">
-                            <span className="text-sm">二维码预留</span>
-                          </div>
+                        <div className="bg-white p-4 rounded-lg border-2 border-purple-300">
+                          <img
+                            src="https://i.ibb.co/V00WRmfY/mmexport1764141306607.jpg"
+                            alt="视频号二维码"
+                            className="w-32 h-40 object-cover rounded"
+                          />
                         </div>
                       </div>
                     </div>
@@ -287,10 +289,12 @@ export default function AIConsultant() {
                         扫码关注我们的视频号，找到最近的一场直播来听。
                       </p>
                       <div className="flex justify-center">
-                        <div className="bg-white p-4 rounded-lg border-2 border-dashed border-purple-300">
-                          <div className="w-32 h-32 bg-gray-100 rounded flex items-center justify-center text-gray-400">
-                            <span className="text-sm">二维码预留</span>
-                          </div>
+                        <div className="bg-white p-4 rounded-lg border-2 border-purple-300">
+                          <img
+                            src="https://i.ibb.co/V00WRmfY/mmexport1764141306607.jpg"
+                            alt="视频号二维码"
+                            className="w-32 h-40 object-cover rounded"
+                          />
                         </div>
                       </div>
                     </div>
