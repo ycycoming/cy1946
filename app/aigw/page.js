@@ -230,7 +230,7 @@ export default function AIConsultant() {
                       <div className="flex justify-center">
                         <div className="bg-white p-4 rounded-lg border-2 border-purple-300">
                           <img
-                            src="https://i.ibb.co/V00WRmfY/mmexport1764141306607.jpg"
+                            src="https://i.ibb.co/1Gx6wyBC/mmexport1764226760994.jpg"
                             alt="视频号二维码"
                             className="w-32 h-40 object-cover rounded"
                           />
@@ -291,7 +291,7 @@ export default function AIConsultant() {
                       <div className="flex justify-center">
                         <div className="bg-white p-4 rounded-lg border-2 border-purple-300">
                           <img
-                            src="https://i.ibb.co/V00WRmfY/mmexport1764141306607.jpg"
+                            src="https://i.ibb.co/1Gx6wyBC/mmexport1764226760994.jpg"
                             alt="视频号二维码"
                             className="w-32 h-40 object-cover rounded"
                           />
