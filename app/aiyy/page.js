@@ -476,15 +476,15 @@ export default function AIOperations() {
         {/* CTA Section */}
         <section className="bg-gradient-to-r from-pink-600 to-pink-700 text-white py-20">
           <div className="max-w-4xl mx-auto text-center px-4">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">准备好让AI接管运营了吗？</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">未来的运营不是招4个人运营4个平台，而是一个人看管4个平台的运营工作流SOP</h2>
             <p className="text-xl text-pink-100 mb-10">
               一天300-500条朋友圈，1000个群同时管理
               <br />
               成本仅为人类运营的1/10
             </p>
             <div className="flex justify-center">
-              <Link href="https://doc.weixin.qq.com/forms/AGMAagcLAAcAD4APQY0AMgCNQANhK63Ff?page=1" target="_blank" rel="noopener noreferrer" className="btn btn-lg bg-white text-pink-600 hover:bg-pink-50 border-0 text-lg px-12 shadow-xl normal-case">
-                立即开始
+              <Link href="https://mp.weixin.qq.com/s/BzNglMjj6HAIXWu8AvvGlQ" target="_blank" rel="noopener noreferrer" className="btn btn-lg bg-white text-pink-600 hover:bg-pink-50 border-0 text-lg px-12 shadow-xl normal-case">
+                查看我们"疯狗般"的AI运营复盘
               </Link>
             </div>
           </div>
