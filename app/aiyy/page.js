@@ -68,7 +68,7 @@ export default function AIOperations() {
                   如果是4个平台，你可能需要4个运营。
                 </p>
                 <p className="font-semibold text-pink-600 text-2xl">
-                  我们隆重有请鲸奇「公私域运营」出场！
+                  我们隆重有请鲸奇「公私域AI全栈/全能运营」出场！
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
