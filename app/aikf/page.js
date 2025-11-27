@@ -613,6 +613,10 @@ export default function AICustomerService() {
                   </li>
                   <li className="flex items-start">
                     <span className="text-orange-600 mr-2">•</span>
+                    仅支持1个触点（私聊或者社群二选一）
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-orange-600 mr-2">•</span>
                     仅支持1个场景（售前/售中/售后三选一）
                   </li>
                   <li className="flex items-start font-semibold text-gray-900">
@@ -642,12 +646,12 @@ export default function AICustomerService() {
                   </div>
                 </div>
                 <p className="text-sm text-orange-100 mb-6">
-                  顶替3-5个人类员工（销冠+咨询师+客服），全年无休
+                  你的客户私聊和社群，都可以接入AI客服了
                 </p>
 
                 {/* 无限制工作 */}
                 <div className="mb-6 p-4 bg-orange-700/50 rounded-lg border border-orange-500">
-                  <h4 className="font-semibold text-white mb-3 text-sm">🚀 全天候无限制</h4>
+                  <h4 className="font-semibold text-white mb-3 text-sm">🚀 移除工作边界，清晨或者半夜，客户来找，都有人接，哦不对，是AI接</h4>
                   <ul className="space-y-2 text-sm text-orange-50">
                     <li className="flex items-start">
                       <span className="text-white mr-2">✓</span>
@@ -664,39 +668,15 @@ export default function AICustomerService() {
                   </ul>
                 </div>
 
-                {/* 全部功能 */}
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-white mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-white font-medium">🎯 AI销冠能力（主动跟进+成交）</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-white mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-white font-medium">💡 AI咨询师能力（专业指导）</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-white mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-white font-medium">🤖 AI客服能力（自动接待）</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-white mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-white font-medium">🔥 主动跟进 + 沉默激活</span>
-                  </li>
-                </ul>
-
                 {/* 多平台多场景 */}
                 <ul className="space-y-2 text-sm text-orange-50 mb-6">
                   <li className="flex items-start">
                     <span className="text-white mr-2">•</span>
-                    不限平台（企微、个微、公众号、WhatsApp全支持）
+                    不限平台（企微、个微都支持）
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-white mr-2">•</span>
+                    不限触点（私聊和社群都可以接，甚至你的官网和小程序）
                   </li>
                   <li className="flex items-start">
                     <span className="text-white mr-2">•</span>
