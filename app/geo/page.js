@@ -14,6 +14,7 @@ export default function GeoPage() {
       title="GEO"
       description="正在激情开发中，即将上线"
       icon="🌍"
+      themeColor="cyan"
     />
   );
 }

@@ -15,6 +15,7 @@ export default function AIAcquisitionPage() {
       title="AI获客"
       description="让AI帮你自动获取精准客户，正在激情开发中"
       icon="🎯"
+      themeColor="green"
     />
   );
 }
