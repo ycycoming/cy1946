@@ -34,8 +34,28 @@ export default function AICustomerService() {
               </div>
               <span className="text-xl font-bold text-gray-900">{config.appName}</span>
             </Link>
-            <Link href="/" className="btn btn-ghost">
-              返回首页
+            <nav className="hidden md:flex items-center space-x-8">
+              <Link href="/" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
+                AI销冠
+              </Link>
+              <Link href="/aikf" className="text-orange-600 font-medium">
+                AI客服
+              </Link>
+              <Link href="/aigw" className="text-gray-600 hover:text-purple-600 transition-colors font-medium">
+                AI顾问
+              </Link>
+              <Link href="/aiyy" className="text-gray-600 hover:text-pink-600 transition-colors font-medium">
+                AI运营
+              </Link>
+              <Link href="/aihk" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+                AI获客
+              </Link>
+              <Link href="/geo" className="text-gray-600 hover:text-cyan-600 transition-colors font-medium">
+                GEO
+              </Link>
+            </nav>
+            <Link href="/" className="btn btn-ghost md:hidden">
+              首页
             </Link>
           </div>
         </div>

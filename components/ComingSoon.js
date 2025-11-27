@@ -3,31 +3,67 @@
 import Link from "next/link";
 import config from "@/config";
 
-export default function ComingSoon({ title, description, icon = "🚀" }) {
+export default function ComingSoon({ title, description, icon = "🚀", themeColor = "orange" }) {
+  const colorMap = {
+    orange: "bg-orange-600",
+    green: "bg-green-600",
+    cyan: "bg-cyan-600",
+  };
+  const bgColor = colorMap[themeColor] || colorMap.orange;
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-purple-50 flex items-center justify-center">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
-        {/* Logo & Back Link */}
-        <div className="mb-12">
-          <Link href="/" className="inline-flex items-center space-x-2 mb-8">
-            <div className="w-12 h-12 bg-orange-600 rounded-xl flex items-center justify-center">
-              <svg
-                className="w-7 h-7 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M13 10V3L4 14h7v7l9-11h-7z"
-                />
-              </svg>
-            </div>
-            <span className="text-2xl font-bold text-gray-900">{config.appName}</span>
-          </Link>
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-purple-50">
+      {/* Header */}
+      <header className="border-b border-gray-100 bg-white sticky top-0 z-50 backdrop-blur-sm bg-white/90">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="flex justify-between items-center">
+            <Link href="/" className="flex items-center space-x-2">
+              <div className={`w-10 h-10 ${bgColor} rounded-xl flex items-center justify-center`}>
+                <svg
+                  className="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  />
+                </svg>
+              </div>
+              <span className="text-xl font-bold text-gray-900">{config.appName}</span>
+            </Link>
+            <nav className="hidden md:flex items-center space-x-8">
+              <Link href="/" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
+                AI销冠
+              </Link>
+              <Link href="/aikf" className="text-gray-600 hover:text-orange-600 transition-colors font-medium">
+                AI客服
+              </Link>
+              <Link href="/aigw" className="text-gray-600 hover:text-purple-600 transition-colors font-medium">
+                AI顾问
+              </Link>
+              <Link href="/aiyy" className="text-gray-600 hover:text-pink-600 transition-colors font-medium">
+                AI运营
+              </Link>
+              <Link href="/aihk" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+                AI获客
+              </Link>
+              <Link href="/geo" className="text-gray-600 hover:text-cyan-600 transition-colors font-medium">
+                GEO
+              </Link>
+            </nav>
+            <Link href="/" className="btn btn-ghost md:hidden">
+              首页
+            </Link>
+          </div>
         </div>
+      </header>
+
+      <div className="flex items-center justify-center" style={{ minHeight: "calc(100vh - 73px)" }}>
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
 
         {/* Coming Soon Content */}
         <div className="relative">
@@ -107,6 +143,7 @@ export default function ComingSoon({ title, description, icon = "🚀" }) {
         <div className="mt-20 text-gray-500 text-sm">
           <p>有任何问题或建议？欢迎随时联系我们</p>
         </div>
+      </div>
       </div>
 
       {/* Custom Animations */}

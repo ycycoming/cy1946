@@ -40,8 +40,28 @@ export default function AIOperations() {
               </div>
               <span className="text-xl font-bold text-gray-900">{config.appName}</span>
             </Link>
-            <Link href="/" className="btn btn-ghost">
-              返回首页
+            <nav className="hidden md:flex items-center space-x-8">
+              <Link href="/" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
+                AI销冠
+              </Link>
+              <Link href="/aikf" className="text-gray-600 hover:text-orange-600 transition-colors font-medium">
+                AI客服
+              </Link>
+              <Link href="/aigw" className="text-gray-600 hover:text-purple-600 transition-colors font-medium">
+                AI顾问
+              </Link>
+              <Link href="/aiyy" className="text-pink-600 font-medium">
+                AI运营
+              </Link>
+              <Link href="/aihk" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+                AI获客
+              </Link>
+              <Link href="/geo" className="text-gray-600 hover:text-cyan-600 transition-colors font-medium">
+                GEO
+              </Link>
+            </nav>
+            <Link href="/" className="btn btn-ghost md:hidden">
+              首页
             </Link>
           </div>
         </div>
@@ -269,7 +289,7 @@ export default function AIOperations() {
                       <div className="flex justify-center">
                         <div className="bg-white p-4 rounded-lg border-2 border-pink-300">
                           <img
-                            src="https://i.ibb.co/1Gx6wyBC/mmexport1764226760994.jpg"
+                            src="https://i.ibb.co/V00WRmfY/mmexport1764141306607.jpg"
                             alt="视频号二维码"
                             className="w-32 h-40 object-cover rounded"
                           />
@@ -377,9 +397,16 @@ export default function AIOperations() {
                     </div>
                     <p className="text-sm text-pink-700 mt-1 font-medium">是的，一个初级人类运营的月薪，拿到一整年的AI运营</p>
                   </div>
-                  <Link href="https://doc.weixin.qq.com/forms/AGMAagcLAAcAD4APQY0AMgCNQANhK63Ff?page=1" target="_blank" rel="noopener noreferrer" className="btn btn-outline border-pink-600 text-pink-600 hover:bg-pink-50 w-full normal-case">
-                    立即咨询
-                  </Link>
+                  <div className="text-center">
+                    <p className="text-sm text-gray-600 mb-3">扫码立即咨询</p>
+                    <div className="flex justify-center">
+                      <img
+                        src="https://i.ibb.co/1Gx6wyBC/mmexport1764226760994.jpg"
+                        alt="咨询二维码"
+                        className="w-32 h-40 object-cover rounded border-2 border-pink-200"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -430,9 +457,16 @@ export default function AIOperations() {
                     </div>
                     <p className="text-sm text-pink-100 mt-1 font-medium">一年万把块钱，可能也就是你一个月运营的基本工资，拿到全年的公私域托管式运营。</p>
                   </div>
-                  <Link href="https://doc.weixin.qq.com/forms/AGMAagcLAAcAD4APQY0AMgCNQANhK63Ff?page=1" target="_blank" rel="noopener noreferrer" className="btn bg-white text-pink-600 hover:bg-pink-50 w-full border-0 normal-case">
-                    立即咨询
-                  </Link>
+                  <div className="text-center">
+                    <p className="text-sm text-pink-100 mb-3">扫码立即咨询</p>
+                    <div className="flex justify-center">
+                      <img
+                        src="https://i.ibb.co/1Gx6wyBC/mmexport1764226760994.jpg"
+                        alt="咨询二维码"
+                        className="w-32 h-40 object-cover rounded border-2 border-pink-300"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
