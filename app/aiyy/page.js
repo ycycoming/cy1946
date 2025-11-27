@@ -269,7 +269,7 @@ export default function AIOperations() {
                       <div className="flex justify-center">
                         <div className="bg-white p-4 rounded-lg border-2 border-pink-300">
                           <img
-                            src="https://i.ibb.co/V00WRmfY/mmexport1764141306607.jpg"
+                            src="https://i.ibb.co/1Gx6wyBC/mmexport1764226760994.jpg"
                             alt="视频号二维码"
                             className="w-32 h-40 object-cover rounded"
                           />
@@ -364,7 +364,11 @@ export default function AIOperations() {
                       <span className="text-4xl font-bold text-gray-900">¥500</span>
                       <span className="text-gray-600 ml-2">/月</span>
                     </div>
-                    <p className="text-sm text-gray-500 mt-1">按月需要支付接入服务费 ¥3,000/次/平台，按年无需</p>
+                    <div className="text-sm text-gray-600 mt-3 space-y-1">
+                      <p>等同于一个月15,000条朋友圈；或：1000个社群的跟进维护；或：无休止的洗稿工作流；或：永不停歇的日更机器</p>
+                      <p className="font-semibold text-gray-800">你买的不是某个功能，你买的是这些结果（之一）。</p>
+                    </div>
+                    <p className="text-sm text-gray-500 mt-3">按月需要支付接入服务费 ¥3,000/次/平台，按年无需</p>
                   </div>
                   <div className="bg-pink-50 border border-pink-200 rounded-lg p-4 mb-6">
                     <div className="flex items-baseline">
@@ -413,7 +417,11 @@ export default function AIOperations() {
                       <span className="text-4xl font-bold text-white">¥1,500</span>
                       <span className="text-pink-200 ml-2">/月</span>
                     </div>
-                    <p className="text-sm text-pink-200 mt-1">按月需要支付接入服务费 ¥3,000/次/平台，按年无需</p>
+                    <div className="text-sm text-pink-100 mt-3 space-y-1">
+                      <p>等同于一个月15,000条朋友圈；以及：1000个社群的跟进维护；以及：无休止的洗稿工作流；以及：永不停歇的日更机器</p>
+                      <p className="font-semibold text-white">你买的不是某个功能，你买的是这些结果（全部）。</p>
+                    </div>
+                    <p className="text-sm text-pink-200 mt-3">按月需要支付接入服务费 ¥3,000/次/平台，按年无需</p>
                   </div>
                   <div className="bg-pink-700/50 border border-pink-400 rounded-lg p-4 mb-6">
                     <div className="flex items-baseline">
