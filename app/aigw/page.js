@@ -230,7 +230,7 @@ export default function AIConsultant() {
                       <div className="flex justify-center">
                         <div className="bg-white p-4 rounded-lg border-2 border-purple-300">
                           <img
-                            src="https://i.ibb.co/1Gx6wyBC/mmexport1764226760994.jpg"
+                            src="https://i.ibb.co/V00WRmfY/mmexport1764141306607.jpg"
                             alt="视频号二维码"
                             className="w-32 h-40 object-cover rounded"
                           />
@@ -291,7 +291,7 @@ export default function AIConsultant() {
                       <div className="flex justify-center">
                         <div className="bg-white p-4 rounded-lg border-2 border-purple-300">
                           <img
-                            src="https://i.ibb.co/1Gx6wyBC/mmexport1764226760994.jpg"
+                            src="https://i.ibb.co/V00WRmfY/mmexport1764141306607.jpg"
                             alt="视频号二维码"
                             className="w-32 h-40 object-cover rounded"
                           />
@@ -424,9 +424,16 @@ export default function AIConsultant() {
                     </div>
                     <p className="text-sm text-purple-700 mt-1 font-medium">是的，一个初级人类顾问的月薪，拿到一整年的AI顾问</p>
                   </div>
-                  <Link href="https://doc.weixin.qq.com/forms/AGMAagcLAAcAD4APQY0AMgCNQANhK63Ff?page=1" target="_blank" rel="noopener noreferrer" className="btn btn-outline border-purple-600 text-purple-600 hover:bg-purple-50 w-full normal-case">
-                    立即咨询
-                  </Link>
+                  <div className="text-center">
+                    <p className="text-sm text-gray-600 mb-3">扫码立即咨询</p>
+                    <div className="flex justify-center">
+                      <img
+                        src="https://i.ibb.co/1Gx6wyBC/mmexport1764226760994.jpg"
+                        alt="咨询二维码"
+                        className="w-32 h-40 object-cover rounded border-2 border-purple-200"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -503,9 +510,16 @@ export default function AIConsultant() {
                     </div>
                     <p className="text-sm text-purple-100 mt-1 font-medium">一个实习生的价钱，拿到顶级咨询师7×24×365给你干一年的活</p>
                   </div>
-                  <Link href="https://doc.weixin.qq.com/forms/AGMAagcLAAcAD4APQY0AMgCNQANhK63Ff?page=1" target="_blank" rel="noopener noreferrer" className="btn bg-white text-purple-600 hover:bg-purple-50 w-full border-0 normal-case">
-                    立即咨询
-                  </Link>
+                  <div className="text-center">
+                    <p className="text-sm text-purple-100 mb-3">扫码立即咨询</p>
+                    <div className="flex justify-center">
+                      <img
+                        src="https://i.ibb.co/1Gx6wyBC/mmexport1764226760994.jpg"
+                        alt="咨询二维码"
+                        className="w-32 h-40 object-cover rounded border-2 border-purple-300"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
