@@ -11,7 +11,7 @@ export const VALID_INVITE_CODES = [
   "DEMO123",
   "TEST001",
   "WELCOME",
-  "CHUNYANG",
+  "CHUNYANG666",
   "VIP2025",
   "TRIAL001",
   "START2025",

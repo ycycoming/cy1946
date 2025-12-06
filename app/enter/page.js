@@ -101,9 +101,6 @@ export default function EnterPage() {
                 disabled={loading}
                 autoFocus
               />
-              <p className="mt-2 text-sm text-gray-500">
-                示例：JINGQI2025
-              </p>
             </div>
 
             {/* 错误提示 */}
