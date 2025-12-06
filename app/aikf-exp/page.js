@@ -166,6 +166,9 @@ export default function AICustomerServiceExperience() {
   const [showBusinessDialog, setShowBusinessDialog] = useState(false);
   const [showAddedConfirmDialog, setShowAddedConfirmDialog] = useState(false);
   const [inviteCode, setInviteCode] = useState("");
+  const [showIntroDialog, setShowIntroDialog] = useState(false);
+  const [introCountdown, setIntroCountdown] = useState(15);
+  const [canConfirmIntro, setCanConfirmIntro] = useState(false);
 
   const step = EXPERIENCE_STEPS.find((s) => s.id === currentStep);
 
@@ -180,7 +183,34 @@ export default function AICustomerServiceExperience() {
     }
 
     setInviteCode(code);
+
+    // 检查是否已经确认过介绍弹窗
+    const introConfirmed = sessionStorage.getItem("introConfirmed");
+    if (!introConfirmed) {
+      setShowIntroDialog(true);
+    }
   }, [router]);
+
+  // 介绍弹窗倒计时
+  useEffect(() => {
+    if (!showIntroDialog) return;
+
+    setIntroCountdown(15);
+    setCanConfirmIntro(false);
+
+    const timer = setInterval(() => {
+      setIntroCountdown((prev) => {
+        if (prev <= 1) {
+          clearInterval(timer);
+          setCanConfirmIntro(true);
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [showIntroDialog]);
 
   // 倒计时效果
   useEffect(() => {
@@ -222,6 +252,16 @@ export default function AICustomerServiceExperience() {
     if (currentStep < EXPERIENCE_STEPS.length) {
       setCurrentStep(currentStep + 1);
     }
+  };
+
+  const handleConfirmIntro = () => {
+    sessionStorage.setItem("introConfirmed", "true");
+    setShowIntroDialog(false);
+  };
+
+  const handleRereadIntro = () => {
+    setIntroCountdown(15);
+    setCanConfirmIntro(false);
   };
 
   const handlePrevious = () => {
@@ -573,6 +613,93 @@ export default function AICustomerServiceExperience() {
             </div>
           </div>
         </div>
+      )}
+
+      {/* 介绍确认弹窗 */}
+      {showIntroDialog && (
+        <dialog className="modal modal-open">
+          <div className="modal-box max-w-3xl">
+            <div className="py-6 space-y-6">
+              <div className="space-y-4 text-lg text-gray-800 leading-relaxed">
+                <p>
+                  本后台设计的目的是为了让你体验AI顾问/客服的五项能力，并拿到整套提示词，这样就省去了你自己摸索的至少半年时间。
+                </p>
+                <p>
+                  之后，接入你自己的私域的时候，效果就和我们前端调好的AI顾问/客服是一样的——提示词是决定效果的唯三因素之一（另外两个是底层大模型和调教者本身的水平）。
+                </p>
+                <p>
+                  等走完最后一步，收集到所有的提示词，你加入自己的产品业务信息，就完事了。
+                  你复制好整套提示词，等接入的时候，直接放到AI顾问的系统提示词里面，正式接入后会给到你新的后台。
+                </p>
+                <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-200 rounded-xl p-6 my-6">
+                  <p className="text-center font-semibold text-blue-800">
+                    <span className="text-2xl">体验</span>，是为了确认和感受效果，<br />
+                    <span className="text-2xl">提示词</span>，是为了拿到和落地效果。
+                  </p>
+                </div>
+                <p>
+                  之后，你选择按月或者按年，接入我们的AI顾问/客服。干活比你的人利索多了，成本只有他们的1/10。
+                </p>
+                <div className="bg-gradient-to-r from-orange-50 to-amber-50 border-2 border-orange-300 rounded-xl p-6 my-6">
+                  <p className="text-center text-lg text-gray-800">
+                    这个体验流程，是你<span className="font-bold text-orange-600 text-2xl underline decoration-4 decoration-orange-400">唯一</span>确认AI顾问效果（通过它的对话）的方式。
+                  </p>
+                </div>
+              </div>
+
+              {/* 倒计时提示 */}
+              {!canConfirmIntro && (
+                <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+                  <div className="flex items-center justify-center space-x-3">
+                    <div className="relative">
+                      <svg className="w-12 h-12" viewBox="0 0 36 36">
+                        <circle cx="18" cy="18" r="16" fill="none" stroke="#e5e7eb" strokeWidth="3" />
+                        <circle
+                          cx="18"
+                          cy="18"
+                          r="16"
+                          fill="none"
+                          stroke="#10b981"
+                          strokeWidth="3"
+                          strokeDasharray={`${(introCountdown / 15) * 100}, 100`}
+                          strokeLinecap="round"
+                          transform="rotate(-90 18 18)"
+                          style={{ transition: "stroke-dasharray 1s linear" }}
+                        />
+                      </svg>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <span className="text-green-600 font-bold text-lg">{introCountdown}</span>
+                      </div>
+                    </div>
+                    <p className="text-gray-600">
+                      请仔细阅读上方内容，{introCountdown}秒后可继续...
+                    </p>
+                  </div>
+                </div>
+              )}
+
+              <div className="flex gap-4 pt-4">
+                <button
+                  onClick={handleRereadIntro}
+                  className="btn btn-outline flex-1 text-base"
+                >
+                  不清楚，我再看一遍
+                </button>
+                <button
+                  onClick={handleConfirmIntro}
+                  disabled={!canConfirmIntro}
+                  className={`btn flex-1 text-base ${
+                    canConfirmIntro
+                      ? "bg-green-600 hover:bg-green-700 text-white border-0"
+                      : "bg-gray-300 cursor-not-allowed opacity-60 border-0"
+                  }`}
+                >
+                  {canConfirmIntro ? "我清楚怎么落地AI顾问了" : `请阅读 ${introCountdown}秒`}
+                </button>
+              </div>
+            </div>
+          </div>
+        </dialog>
       )}
 
       {/* 确认已添加AI客服弹窗 */}
