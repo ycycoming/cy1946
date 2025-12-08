@@ -166,45 +166,45 @@ export default function OEMPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-white p-6 rounded-2xl border-2 border-blue-200 shadow-lg hover:shadow-xl transition-shadow">
+            <Link href="/" className="bg-white p-6 rounded-2xl border-2 border-blue-200 shadow-lg hover:shadow-xl transition-all hover:scale-105 block">
               <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
                 <span className="text-2xl">💰</span>
               </div>
-              <h3 className="text-xl font-bold text-blue-600 mb-3">AI销冠</h3>
+              <h3 className="text-xl font-bold text-blue-600 mb-3">AI销冠 →</h3>
               <p className="text-gray-600">绝不单单是替代公司的销售，更多的是<span className="font-semibold text-blue-600">复刻公司里面最能卖的那个人</span></p>
-            </div>
+            </Link>
 
-            <div className="bg-white p-6 rounded-2xl border-2 border-orange-200 shadow-lg hover:shadow-xl transition-shadow">
+            <Link href="/aikf" className="bg-white p-6 rounded-2xl border-2 border-orange-200 shadow-lg hover:shadow-xl transition-all hover:scale-105 block">
               <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mb-4">
                 <span className="text-2xl">🎧</span>
               </div>
-              <h3 className="text-xl font-bold text-orange-600 mb-3">AI客服</h3>
+              <h3 className="text-xl font-bold text-orange-600 mb-3">AI客服 →</h3>
               <p className="text-gray-600">替代人工回答<span className="font-semibold text-orange-600">所有的标准化问题</span>。是的，所有的。</p>
-            </div>
+            </Link>
 
-            <div className="bg-white p-6 rounded-2xl border-2 border-purple-200 shadow-lg hover:shadow-xl transition-shadow">
+            <Link href="/aigw" className="bg-white p-6 rounded-2xl border-2 border-purple-200 shadow-lg hover:shadow-xl transition-all hover:scale-105 block">
               <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
                 <span className="text-2xl">🎯</span>
               </div>
-              <h3 className="text-xl font-bold text-purple-600 mb-3">AI顾问</h3>
+              <h3 className="text-xl font-bold text-purple-600 mb-3">AI顾问 →</h3>
               <p className="text-gray-600"><span className="font-semibold text-purple-600">咨询师级别的顾问</span>，回答所有客户的个性化问题，并引导产品成交，为销售做好准备。</p>
-            </div>
+            </Link>
 
-            <div className="bg-white p-6 rounded-2xl border-2 border-pink-200 shadow-lg hover:shadow-xl transition-shadow">
+            <Link href="/aiyy" className="bg-white p-6 rounded-2xl border-2 border-pink-200 shadow-lg hover:shadow-xl transition-all hover:scale-105 block">
               <div className="w-12 h-12 bg-pink-100 rounded-xl flex items-center justify-center mb-4">
                 <span className="text-2xl">📱</span>
               </div>
-              <h3 className="text-xl font-bold text-pink-600 mb-3">AI运营</h3>
+              <h3 className="text-xl font-bold text-pink-600 mb-3">AI运营 →</h3>
               <p className="text-gray-600">私域运营朋友圈/社群，公域运营小红书和短视频。<span className="font-semibold text-pink-600">公私域一把抓</span>。</p>
-            </div>
+            </Link>
 
-            <div className="bg-white p-6 rounded-2xl border-2 border-cyan-200 shadow-lg hover:shadow-xl transition-shadow">
+            <Link href="/geo" className="bg-white p-6 rounded-2xl border-2 border-cyan-200 shadow-lg hover:shadow-xl transition-all hover:scale-105 block">
               <div className="w-12 h-12 bg-cyan-100 rounded-xl flex items-center justify-center mb-4">
                 <span className="text-2xl">🔍</span>
               </div>
-              <h3 className="text-xl font-bold text-cyan-600 mb-3">GEO</h3>
+              <h3 className="text-xl font-bold text-cyan-600 mb-3">GEO →</h3>
               <p className="text-gray-600">让AI<span className="font-semibold text-cyan-600">收录你的产品作为答案</span>，并会说你的好话。</p>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -220,7 +220,7 @@ export default function OEMPage() {
 
           <div className="bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200 rounded-2xl p-8 md:p-12">
             <p className="text-xl text-gray-800 leading-relaxed mb-8">
-              牛逼轰轰的AI产品，必然能够<span className="font-bold text-green-600">替代企业的基础人力</span>，<span className="font-bold text-green-600">复刻企业的高级人力（销冠）</span>，<span className="font-bold text-green-600">放大企业的顶级人才（顶级）</span>。
+              牛逼轰轰的AI产品，必然能够<span className="font-bold text-green-600">替代企业的基础人力</span>，<span className="font-bold text-green-600">复刻企业的高级人力（销冠）</span>，<span className="font-bold text-green-600">放大企业的顶级人才（总裁/老板本人）</span>。
             </p>
 
             <div className="bg-white rounded-xl p-6 mb-6">
