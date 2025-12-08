@@ -73,7 +73,7 @@ export default function HehuoPage() {
               搞定了流量和产品？
             </h1>
             <p className="text-2xl md:text-3xl text-gray-600 mb-4 leading-relaxed">
-              让春阳来帮你搞定内容和私域。
+              让春阳来帮你搞定内容和私域，售前咨询和跟进成交，以及落地续费。
             </p>
             <p className="text-xl text-gray-700 mb-10">
               春阳本人，会带着他调好的4大智能体加盟你的业务：
@@ -343,7 +343,7 @@ export default function HehuoPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              合伙人收费
+              合伙人收费（支持无效退款）
             </h2>
             <p className="text-lg text-gray-600">
               由四部分组成：每月代运营费用 + 基础销售分成 + 额外奖金 + 股权或期权激励
@@ -390,8 +390,18 @@ export default function HehuoPage() {
             </div>
           </div>
 
+          {/* 无效退款大标语 */}
+          <div className="mt-12 bg-gradient-to-r from-red-500 to-orange-500 rounded-2xl p-8 text-center shadow-2xl">
+            <p className="text-5xl md:text-7xl font-black text-white tracking-wider animate-pulse">
+              无效退款
+            </p>
+            <p className="text-xl text-white/90 mt-4 font-medium">
+              我们对效果负责，让你零风险合作
+            </p>
+          </div>
+
           {/* 效果承诺 */}
-          <div className="mt-12 bg-gray-100 rounded-2xl p-8">
+          <div className="mt-8 bg-gray-100 rounded-2xl p-8">
             <h3 className="text-xl font-bold text-gray-900 mb-4">效果承诺</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
               当合伙周期产生的额外总体业绩价值，加上省去的人员成本（默认按照客服、运营、销售、顾问各1个计算），减去该周期内你所支付的服务费，结果为负的：我们按照8000/月，乘以已经合作的时长扣除基本人力工资，退还其余所有已支付费用。
@@ -542,7 +552,7 @@ export default function HehuoPage() {
           <div className="space-y-4">
             {[
               { text: "产品已经打磨成熟，流量已经获取稳定，但转化欠缺，私域大量客户线索沉默", solution: "需要引入AI销冠，接管售中环节", link: "/", color: "blue" },
-              { text: "产品竞争力不错，但价格迟迟上不来，于是利润单薄", solution: "需要引入销冠级别的强杀伤内容", link: null, color: "amber" },
+              { text: "产品竞争力不错，但价格迟迟上不来，于是利润单薄", solution: "需要引入销冠级别的强杀伤内容", link: "https://mp.weixin.qq.com/s/bqWJNtdKHk-GMsdTA5LGMQ", color: "amber", external: true },
               { text: "首单卖的还可以，引流品跑得很好，但综合一算不赚钱，客户落地效果一般，续费和增购不佳", solution: "需要引入AI客服，接管售后环节", link: "/aikf", color: "orange" },
               { text: "公司人力能力有限，学习速度太慢，执行力太弱，工作强度不够", solution: "需要引入7x24x365的咨询师级别顾问，接管售前环节", link: "/aigw", color: "purple" },
               { text: "公司业绩还不错，但是需要快速杠杆，业绩加倍", solution: "需要引入强力合伙人", link: null, color: "green" },
@@ -553,7 +563,13 @@ export default function HehuoPage() {
                   <div>
                     <p className="text-gray-700 mb-2">{item.text}</p>
                     <p className="font-semibold text-amber-700">
-                      → {item.link ? <Link href={item.link} className="hover:underline">{item.solution}</Link> : item.solution}
+                      → {item.link ? (
+                        item.external ? (
+                          <a href={item.link} target="_blank" rel="noopener noreferrer" className="hover:underline text-amber-600">{item.solution} →</a>
+                        ) : (
+                          <Link href={item.link} className="hover:underline">{item.solution}</Link>
+                        )
+                      ) : item.solution}
                     </p>
                   </div>
                 </div>
@@ -588,7 +604,7 @@ export default function HehuoPage() {
             <div className="flex flex-col items-center">
               <div className="bg-white p-4 rounded-xl shadow-lg border-2 border-amber-200 mb-4">
                 <img
-                  src="https://i.ibb.co/ks7qqNxL/image.png"
+                  src="https://i.ibb.co/JR1txw0D/image.png"
                   alt="合伙人申请表单二维码"
                   className="w-64 h-64 object-contain"
                 />
