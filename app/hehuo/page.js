@@ -396,7 +396,7 @@ export default function HehuoPage() {
               无效退款
             </p>
             <p className="text-xl text-white/90 mt-4 font-medium">
-              我们对效果负责，让你零风险合作
+              看能力付定金；看效果付尾款；按业绩算分成。
             </p>
           </div>
 
@@ -604,7 +604,7 @@ export default function HehuoPage() {
             <div className="flex flex-col items-center">
               <div className="bg-white p-4 rounded-xl shadow-lg border-2 border-amber-200 mb-4">
                 <img
-                  src="https://i.ibb.co/JR1txw0D/image.png"
+                  src="https://i.ibb.co/Jj8SQZSP/image.png"
                   alt="合伙人申请表单二维码"
                   className="w-64 h-64 object-contain"
                 />
