@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getSEOTags } from "@/libs/seo";
 import config from "@/config";
+import MobileNav from "@/components/MobileNav";
 
 export const metadata = getSEOTags({
   title: `AI顾问 - 顶级聪明的售前咨询AI | ${config.appName}`,
@@ -56,10 +57,14 @@ export default function AIConsultant() {
               <Link href="/geo" className="text-gray-600 hover:text-cyan-600 transition-colors font-medium">
                 GEO
               </Link>
+              <Link href="/oem" className="text-gray-600 hover:text-emerald-600 transition-colors font-medium">
+                代理贴牌
+              </Link>
+              <Link href="/hehuo" className="text-gray-600 hover:text-amber-600 transition-colors font-medium">
+                合伙人
+              </Link>
             </nav>
-            <Link href="/" className="btn btn-ghost md:hidden">
-              首页
-            </Link>
+            <MobileNav currentPath="/aigw" />
           </div>
         </div>
       </header>

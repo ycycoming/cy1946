@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getSEOTags } from "@/libs/seo";
 import config from "@/config";
+import MobileNav from "@/components/MobileNav";
 
 export const metadata = getSEOTags({
   title: `代理贴牌 - AI产品合作共赢 | ${config.appName}`,
@@ -41,22 +42,29 @@ export default function OEMPage() {
               <Link href="/aikf" className="text-gray-600 hover:text-orange-600 transition-colors font-medium">
                 AI客服
               </Link>
+              <Link href="/aish" className="text-gray-600 hover:text-indigo-600 transition-colors font-medium">
+                AI售后
+              </Link>
               <Link href="/aigw" className="text-gray-600 hover:text-purple-600 transition-colors font-medium">
                 AI顾问
               </Link>
               <Link href="/aiyy" className="text-gray-600 hover:text-pink-600 transition-colors font-medium">
                 AI运营
               </Link>
+              <Link href="/aihk" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+                AI获客
+              </Link>
               <Link href="/geo" className="text-gray-600 hover:text-cyan-600 transition-colors font-medium">
                 GEO
               </Link>
-              <Link href="/oem" className="text-green-600 font-medium">
+              <Link href="/oem" className="text-emerald-600 font-medium">
                 代理贴牌
               </Link>
+              <Link href="/hehuo" className="text-gray-600 hover:text-amber-600 transition-colors font-medium">
+                合伙人
+              </Link>
             </nav>
-            <Link href="/" className="btn btn-ghost md:hidden">
-              返回首页
-            </Link>
+            <MobileNav currentPath="/oem" />
           </div>
         </div>
       </header>
