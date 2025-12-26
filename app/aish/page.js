@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getSEOTags } from "@/libs/seo";
 import config from "@/config";
 import MobileNav from "@/components/MobileNav";
+import QRCodeImage from "@/components/QRCodeImage";
 
 export const metadata = getSEOTags({
   title: `AI售后 - AI客户成功CSM | ${config.appName}`,
@@ -365,18 +366,11 @@ export default function AIAfterSales() {
                   </div>
                 </div>
                 <div className="flex justify-center">
-                  <img
+                  <QRCodeImage
                     src="https://i.ibb.co/DPPDhp0f"
                     alt="春阳视频号二维码"
-                    className="w-48 h-48 rounded-lg border-2 border-indigo-200"
-                    onError={(e) => {
-                      e.target.style.display = 'none';
-                      e.target.nextElementSibling.style.display = 'flex';
-                    }}
+                    fallbackText="扫码关注春阳视频号"
                   />
-                  <div className="w-48 h-48 bg-gray-100 rounded-lg border-2 border-indigo-200 items-center justify-center text-gray-400 text-sm" style={{display: 'none'}}>
-                    扫码关注春阳视频号
-                  </div>
                 </div>
               </div>
 
@@ -402,18 +396,11 @@ export default function AIAfterSales() {
                   </div>
                 </div>
                 <div className="flex justify-center">
-                  <img
+                  <QRCodeImage
                     src="https://i.ibb.co/hJMXj1cW"
                     alt="老板体验二维码"
-                    className="w-48 h-48 rounded-lg border-2 border-white"
-                    onError={(e) => {
-                      e.target.style.display = 'none';
-                      e.target.nextElementSibling.style.display = 'flex';
-                    }}
+                    fallbackText="扫码登记体验"
                   />
-                  <div className="w-48 h-48 bg-white/10 rounded-lg border-2 border-white items-center justify-center text-white text-sm" style={{display: 'none'}}>
-                    扫码登记体验
-                  </div>
                 </div>
               </div>
             </div>
