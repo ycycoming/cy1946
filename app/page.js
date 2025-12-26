@@ -2,6 +2,7 @@ import { Suspense } from 'react';
 import Link from "next/link";
 import { getSEOTags, renderSchemaTags, renderOrganizationSchema } from "@/libs/seo";
 import config from "@/config";
+import MobileNav from "@/components/MobileNav";
 
 // Enhanced SEO with canonical URL
 export const metadata = getSEOTags({
@@ -54,6 +55,9 @@ export default function Home() {
                 <Link href="/aikf" className="text-gray-600 hover:text-orange-600 transition-colors font-medium">
                   AI客服
                 </Link>
+                <Link href="/aish" className="text-gray-600 hover:text-indigo-600 transition-colors font-medium">
+                  AI售后
+                </Link>
                 <Link href="/aigw" className="text-gray-600 hover:text-purple-600 transition-colors font-medium">
                   AI顾问
                 </Link>
@@ -66,11 +70,18 @@ export default function Home() {
                 <Link href="/geo" className="text-gray-600 hover:text-cyan-600 transition-colors font-medium">
                   GEO
                 </Link>
+                <Link href="/oem" className="text-gray-600 hover:text-emerald-600 transition-colors font-medium">
+                  代理贴牌
+                </Link>
+                <Link href="/hehuo" className="text-gray-600 hover:text-amber-600 transition-colors font-medium">
+                  合伙人
+                </Link>
               </nav>
               <div className="flex items-center space-x-3">
-                <Link href="#how-it-works" className="btn bg-blue-600 hover:bg-blue-700 text-white border-0 font-medium normal-case shadow-sm">
+                <Link href="#how-it-works" className="btn bg-blue-600 hover:bg-blue-700 text-white border-0 font-medium normal-case shadow-sm hidden md:inline-flex">
                   来吧，展示
                 </Link>
+                <MobileNav currentPath="/" />
               </div>
             </div>
           </div>

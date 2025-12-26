@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getSEOTags } from "@/libs/seo";
 import config from "@/config";
+import MobileNav from "@/components/MobileNav";
 
 export const metadata = getSEOTags({
   title: `AI客服 - 24/7智能客户服务 | ${config.appName}`,
@@ -41,6 +42,9 @@ export default function AICustomerService() {
               <Link href="/aikf" className="text-orange-600 font-medium">
                 AI客服
               </Link>
+              <Link href="/aish" className="text-gray-600 hover:text-indigo-600 transition-colors font-medium">
+                AI售后
+              </Link>
               <Link href="/aigw" className="text-gray-600 hover:text-purple-600 transition-colors font-medium">
                 AI顾问
               </Link>
@@ -53,10 +57,14 @@ export default function AICustomerService() {
               <Link href="/geo" className="text-gray-600 hover:text-cyan-600 transition-colors font-medium">
                 GEO
               </Link>
+              <Link href="/oem" className="text-gray-600 hover:text-emerald-600 transition-colors font-medium">
+                代理贴牌
+              </Link>
+              <Link href="/hehuo" className="text-gray-600 hover:text-amber-600 transition-colors font-medium">
+                合伙人
+              </Link>
             </nav>
-            <Link href="/" className="btn btn-ghost md:hidden">
-              首页
-            </Link>
+            <MobileNav currentPath="/aikf" />
           </div>
         </div>
       </header>
