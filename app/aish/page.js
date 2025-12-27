@@ -367,7 +367,7 @@ export default function AIAfterSales() {
                 </div>
                 <div className="flex justify-center">
                   <QRCodeImage
-                    src="https://i.ibb.co/DPPDhp0f"
+                    src="https://i.ibb.co/V00WRmfY/mmexport1764141306607.jpg"
                     alt="春阳视频号二维码"
                     fallbackText="扫码关注春阳视频号"
                   />
@@ -397,7 +397,7 @@ export default function AIAfterSales() {
                 </div>
                 <div className="flex justify-center">
                   <QRCodeImage
-                    src="https://i.ibb.co/hJMXj1cW"
+                    src="https://i.ibb.co/RkShm4N0/mmexport1766733478692.jpg"
                     alt="老板体验二维码"
                     fallbackText="扫码登记体验"
                     borderColor="border-white"
