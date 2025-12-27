@@ -400,6 +400,9 @@ export default function AIAfterSales() {
                     src="https://i.ibb.co/hJMXj1cW"
                     alt="老板体验二维码"
                     fallbackText="扫码登记体验"
+                    borderColor="border-white"
+                    bgColor="bg-white/10"
+                    textColor="text-white"
                   />
                 </div>
               </div>
